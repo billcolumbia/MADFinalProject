@@ -13,6 +13,7 @@
 		AFCDAD9A1637163F00F76D41 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = AFCDAD981637163F00F76D41 /* InfoPlist.strings */; };
 		AFCDAD9C1637163F00F76D41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDAD9B1637163F00F76D41 /* main.m */; };
 		AFCDADA01637163F00F76D41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDAD9F1637163F00F76D41 /* AppDelegate.m */; };
+		AFCDADA71637164C00F76D41 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		AFCDAD9D1637163F00F76D41 /* Final Project-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Final Project-Prefix.pch"; sourceTree = "<group>"; };
 		AFCDAD9E1637163F00F76D41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFCDAD9F1637163F00F76D41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		AFCDAD951637163F00F76D41 /* Final Project */ = {
 			isa = PBXGroup;
 			children = (
+				AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */,
 				AFCDAD9E1637163F00F76D41 /* AppDelegate.h */,
 				AFCDAD9F1637163F00F76D41 /* AppDelegate.m */,
 				AFCDAD961637163F00F76D41 /* Supporting Files */,
@@ -141,6 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AFCDAD9A1637163F00F76D41 /* InfoPlist.strings in Resources */,
+				AFCDADA71637164C00F76D41 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
