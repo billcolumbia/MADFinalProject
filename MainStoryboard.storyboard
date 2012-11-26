@@ -1,34 +1,216 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="Wdx-Uc-U87">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2549" systemVersion="12C60" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="QSu-n6-UCs">
     <dependencies>
         <deployment defaultVersion="1296" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1498"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--homeVC-->
         <scene sceneID="rsi-BC-8a3">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t3T-Ue-7bN" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="Wdx-Uc-U87" sceneMemberID="viewController">
+                <viewController id="Wdx-Uc-U87" userLabel="homeVC" customClass="HomeViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XvL-cE-ady">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="ohai" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" id="6O4-4G-bjN">
-                                <rect key="frame" x="139" y="88" width="42" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3kn-0g-rlR">
+                                <rect key="frame" x="111" y="84" width="98" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Plan route">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UhQ-ab-jk5" kind="push" id="KoN-Y3-lRa"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2rt-oM-Ara">
+                                <rect key="frame" x="106" y="148" width="109" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Find station">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ab5-Xe-iwx" kind="push" id="HmD-TL-EDF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="AnG-nq-Gw0">
+                                <rect key="frame" x="106" y="211" width="109" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Favs">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="wPl-MO-lse" kind="push" id="vMF-G7-KTV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Rx-UH-G9n">
+                                <rect key="frame" x="20" y="391" width="109" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Settings">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="EUS-Ck-K7x" kind="modal" id="urz-3Z-Enj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="roi-GR-K6b">
+                                <rect key="frame" x="191" y="391" width="109" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Menu">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="0Xv-E6-dG2" kind="modal" id="Fz8-fd-4Rf"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="onV-Bq-m8Q"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="154" y="61"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="xJD-zD-Ppi">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fsx-mH-F5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationController definesPresentationContext="YES" id="QSu-n6-UCs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xov-hf-Al8">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Wdx-Uc-U87" kind="relationship" relationship="rootViewController" id="fJU-r5-Vlb"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-294" y="67"/>
+        </scene>
+        <!--settingsModalVC-->
+        <scene sceneID="pWL-nO-ySr">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="VYC-cg-wVX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="EUS-Ck-K7x" userLabel="settingsModalVC" customClass="SettingsModalViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="odL-lb-c86">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ppm-46-Egp"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-91" y="-639"/>
+        </scene>
+        <!--menuModalVC-->
+        <scene sceneID="4YI-de-Zl6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bum-3t-vES" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="0Xv-E6-dG2" userLabel="menuModalVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uS5-gu-ZR1">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Ulc-jy-Op7"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="400" y="-639"/>
+        </scene>
+        <!--planRouteVC-->
+        <scene sceneID="taw-a2-pSt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ymf-LB-BIK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="UhQ-ab-jk5" userLabel="planRouteVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="agn-GQ-4xf">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Plan Route" id="jBY-7t-rsC"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="799" y="-236"/>
+        </scene>
+        <!--findStationVC-->
+        <scene sceneID="Rya-Z8-yM3">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yDq-4n-ot3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Ab5-Xe-iwx" userLabel="findStationVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iIu-qo-x9B">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Find Station" id="ZH3-R8-1oe"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="794" y="358"/>
+        </scene>
+        <!--overviewVC-->
+        <scene sceneID="m2o-rC-rnH">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2De-fd-OgX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="TE9-rh-yaa" userLabel="overviewVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZQL-2Z-Ugk">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="166" y="63"/>
+            <point key="canvasLocation" x="1275" y="-236"/>
+        </scene>
+        <!--favVC-->
+        <scene sceneID="RNL-CR-YvI">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s2U-5N-5Gx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="wPl-MO-lse" userLabel="favVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ysc-2S-Dak">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Favorites" id="J3B-nH-i0Q"/>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="793" y="984"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="HomeViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/HomeViewController.h"/>
+        </class>
+        <class className="SettingsModalViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SettingsModalViewController.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

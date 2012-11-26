@@ -13,6 +13,8 @@
 		AF0DAE9616389BC70036254D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0DAE9016389BC70036254D /* FMDatabaseQueue.m */; };
 		AF0DAE9716389BC70036254D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0DAE9216389BC70036254D /* FMResultSet.m */; };
 		AF0DAE9A16389C130036254D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0DAE9916389C130036254D /* libsqlite3.dylib */; };
+		AF53459A165AFFCC0082AB1D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF534599165AFFCC0082AB1D /* HomeViewController.m */; };
+		AF53459D165B01DC0082AB1D /* SettingsModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */; };
 		AF96A9C116407C12004DD8A8 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9AF16407C12004DD8A8 /* AFHTTPClient.m */; };
 		AF96A9C216407C12004DD8A8 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9B116407C12004DD8A8 /* AFHTTPRequestOperation.m */; };
 		AF96A9C316407C12004DD8A8 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9B316407C12004DD8A8 /* AFImageRequestOperation.m */; };
@@ -43,6 +45,10 @@
 		AF0DAE9116389BC70036254D /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = FMDB/FMResultSet.h; sourceTree = "<group>"; };
 		AF0DAE9216389BC70036254D /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = FMDB/FMResultSet.m; sourceTree = "<group>"; };
 		AF0DAE9916389C130036254D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		AF534598165AFFCC0082AB1D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../HomeViewController.h; sourceTree = "<group>"; };
+		AF534599165AFFCC0082AB1D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../HomeViewController.m; sourceTree = "<group>"; };
+		AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsModalViewController.h; sourceTree = "<group>"; };
+		AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsModalViewController.m; sourceTree = "<group>"; };
 		AF96A9AE16407C12004DD8A8 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		AF96A9AF16407C12004DD8A8 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		AF96A9B016407C12004DD8A8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -72,7 +78,7 @@
 		AFCDAD9D1637163F00F76D41 /* Final Project-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Final Project-Prefix.pch"; sourceTree = "<group>"; };
 		AFCDAD9E1637163F00F76D41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFCDAD9F1637163F00F76D41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = MainStoryboard.storyboard; path = ../MainStoryboard.storyboard; sourceTree = "<group>"; };
+		AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +142,9 @@
 		AFCDAD801637163E00F76D41 = {
 			isa = PBXGroup;
 			children = (
+				AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */,
+				AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */,
+				AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */,
 				AF0DAE9916389C130036254D /* libsqlite3.dylib */,
 				AF96A9AD16407C12004DD8A8 /* AFNetworking */,
 				AF0DAE9816389BCE0036254D /* FMDB */,
@@ -166,9 +175,10 @@
 		AFCDAD951637163F00F76D41 /* Final Project */ = {
 			isa = PBXGroup;
 			children = (
-				AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */,
 				AFCDAD9E1637163F00F76D41 /* AppDelegate.h */,
 				AFCDAD9F1637163F00F76D41 /* AppDelegate.m */,
+				AF534598165AFFCC0082AB1D /* HomeViewController.h */,
+				AF534599165AFFCC0082AB1D /* HomeViewController.m */,
 				AFCDAD961637163F00F76D41 /* Supporting Files */,
 			);
 			path = "Final Project";
@@ -263,6 +273,8 @@
 				AF96A9C716407C12004DD8A8 /* AFURLConnectionOperation.m in Sources */,
 				AF96A9C816407C12004DD8A8 /* AFXMLRequestOperation.m in Sources */,
 				AF96A9C916407C12004DD8A8 /* UIImageView+AFNetworking.m in Sources */,
+				AF53459A165AFFCC0082AB1D /* HomeViewController.m in Sources */,
+				AF53459D165B01DC0082AB1D /* SettingsModalViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
