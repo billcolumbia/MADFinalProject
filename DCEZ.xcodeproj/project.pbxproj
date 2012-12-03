@@ -15,6 +15,10 @@
 		AF0DAE9A16389C130036254D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0DAE9916389C130036254D /* libsqlite3.dylib */; };
 		AF53459A165AFFCC0082AB1D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF534599165AFFCC0082AB1D /* HomeViewController.m */; };
 		AF53459D165B01DC0082AB1D /* SettingsModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */; };
+		AF6106431664310800588519 /* FindStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF6106421664310800588519 /* FindStationViewController.m */; };
+		AF610647166431A900588519 /* FavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF610646166431A900588519 /* FavViewController.m */; };
+		AF6106491664425E00588519 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6106481664425E00588519 /* Default@2x.png */; };
+		AF61064B1664426100588519 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61064A1664426100588519 /* Default.png */; };
 		AF96A9C116407C12004DD8A8 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9AF16407C12004DD8A8 /* AFHTTPClient.m */; };
 		AF96A9C216407C12004DD8A8 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9B116407C12004DD8A8 /* AFHTTPRequestOperation.m */; };
 		AF96A9C316407C12004DD8A8 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9B316407C12004DD8A8 /* AFImageRequestOperation.m */; };
@@ -24,6 +28,8 @@
 		AF96A9C716407C12004DD8A8 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9BC16407C12004DD8A8 /* AFURLConnectionOperation.m */; };
 		AF96A9C816407C12004DD8A8 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9BE16407C12004DD8A8 /* AFXMLRequestOperation.m */; };
 		AF96A9C916407C12004DD8A8 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9C016407C12004DD8A8 /* UIImageView+AFNetworking.m */; };
+		AFB1C58216642F9F0018FC26 /* PlanRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C58116642F9F0018FC26 /* PlanRouteViewController.m */; };
+		AFB74F42166D6D1600BA71EE /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB74F41166D6D1600BA71EE /* MenuViewController.m */; };
 		AFCDAD901637163F00F76D41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCDAD8F1637163F00F76D41 /* UIKit.framework */; };
 		AFCDAD921637163F00F76D41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCDAD911637163F00F76D41 /* Foundation.framework */; };
 		AFCDAD941637163F00F76D41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCDAD931637163F00F76D41 /* CoreGraphics.framework */; };
@@ -47,8 +53,14 @@
 		AF0DAE9916389C130036254D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		AF534598165AFFCC0082AB1D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../HomeViewController.h; sourceTree = "<group>"; };
 		AF534599165AFFCC0082AB1D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../HomeViewController.m; sourceTree = "<group>"; };
-		AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SettingsModalViewController.h; sourceTree = "<group>"; };
-		AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingsModalViewController.m; sourceTree = "<group>"; };
+		AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsModalViewController.h; path = ../SettingsModalViewController.h; sourceTree = "<group>"; };
+		AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsModalViewController.m; path = ../SettingsModalViewController.m; sourceTree = "<group>"; };
+		AF6106411664310800588519 /* FindStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindStationViewController.h; sourceTree = "<group>"; };
+		AF6106421664310800588519 /* FindStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindStationViewController.m; sourceTree = "<group>"; };
+		AF610645166431A900588519 /* FavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavViewController.h; path = ../FavViewController.h; sourceTree = "<group>"; };
+		AF610646166431A900588519 /* FavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavViewController.m; path = ../FavViewController.m; sourceTree = "<group>"; };
+		AF6106481664425E00588519 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AF61064A1664426100588519 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AF96A9AE16407C12004DD8A8 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		AF96A9AF16407C12004DD8A8 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		AF96A9B016407C12004DD8A8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -68,14 +80,18 @@
 		AF96A9BE16407C12004DD8A8 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		AF96A9BF16407C12004DD8A8 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		AF96A9C016407C12004DD8A8 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		AFCDAD8B1637163F00F76D41 /* Final Project.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Final Project.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFB1C58016642F9F0018FC26 /* PlanRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlanRouteViewController.h; path = ../PlanRouteViewController.h; sourceTree = "<group>"; };
+		AFB1C58116642F9F0018FC26 /* PlanRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlanRouteViewController.m; path = ../PlanRouteViewController.m; sourceTree = "<group>"; };
+		AFB74F40166D6D1600BA71EE /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		AFB74F41166D6D1600BA71EE /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		AFCDAD8B1637163F00F76D41 /* DCEZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCEZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCDAD8F1637163F00F76D41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFCDAD911637163F00F76D41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		AFCDAD931637163F00F76D41 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		AFCDAD971637163F00F76D41 /* Final Project-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Final Project-Info.plist"; sourceTree = "<group>"; };
+		AFCDAD971637163F00F76D41 /* DCEZ-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DCEZ-Info.plist"; sourceTree = "<group>"; };
 		AFCDAD991637163F00F76D41 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		AFCDAD9B1637163F00F76D41 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		AFCDAD9D1637163F00F76D41 /* Final Project-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Final Project-Prefix.pch"; sourceTree = "<group>"; };
+		AFCDAD9D1637163F00F76D41 /* DCEZ-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DCEZ-Prefix.pch"; sourceTree = "<group>"; };
 		AFCDAD9E1637163F00F76D41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFCDAD9F1637163F00F76D41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
@@ -113,6 +129,15 @@
 			name = FMDB;
 			sourceTree = "<group>";
 		};
+		AF61064C1664444D00588519 /* Image Assets */ = {
+			isa = PBXGroup;
+			children = (
+				AF61064A1664426100588519 /* Default.png */,
+				AF6106481664425E00588519 /* Default@2x.png */,
+			);
+			name = "Image Assets";
+			sourceTree = "<group>";
+		};
 		AF96A9AD16407C12004DD8A8 /* AFNetworking */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,14 +167,13 @@
 		AFCDAD801637163E00F76D41 = {
 			isa = PBXGroup;
 			children = (
-				AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */,
-				AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */,
 				AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */,
 				AF0DAE9916389C130036254D /* libsqlite3.dylib */,
 				AF96A9AD16407C12004DD8A8 /* AFNetworking */,
+				AFCDAD951637163F00F76D41 /* Application Files */,
 				AF0DAE9816389BCE0036254D /* FMDB */,
-				AFCDAD951637163F00F76D41 /* Final Project */,
 				AFCDAD8E1637163F00F76D41 /* Frameworks */,
+				AF61064C1664444D00588519 /* Image Assets */,
 				AFCDAD8C1637163F00F76D41 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -157,7 +181,7 @@
 		AFCDAD8C1637163F00F76D41 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				AFCDAD8B1637163F00F76D41 /* Final Project.app */,
+				AFCDAD8B1637163F00F76D41 /* DCEZ.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -172,25 +196,36 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		AFCDAD951637163F00F76D41 /* Final Project */ = {
+		AFCDAD951637163F00F76D41 /* Application Files */ = {
 			isa = PBXGroup;
 			children = (
 				AFCDAD9E1637163F00F76D41 /* AppDelegate.h */,
 				AFCDAD9F1637163F00F76D41 /* AppDelegate.m */,
+				AF610645166431A900588519 /* FavViewController.h */,
+				AF610646166431A900588519 /* FavViewController.m */,
+				AF6106411664310800588519 /* FindStationViewController.h */,
+				AF6106421664310800588519 /* FindStationViewController.m */,
 				AF534598165AFFCC0082AB1D /* HomeViewController.h */,
 				AF534599165AFFCC0082AB1D /* HomeViewController.m */,
+				AFB1C58016642F9F0018FC26 /* PlanRouteViewController.h */,
+				AFB1C58116642F9F0018FC26 /* PlanRouteViewController.m */,
+				AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */,
+				AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */,
+				AFB74F40166D6D1600BA71EE /* MenuViewController.h */,
+				AFB74F41166D6D1600BA71EE /* MenuViewController.m */,
 				AFCDAD961637163F00F76D41 /* Supporting Files */,
 			);
+			name = "Application Files";
 			path = "Final Project";
 			sourceTree = "<group>";
 		};
 		AFCDAD961637163F00F76D41 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				AFCDAD971637163F00F76D41 /* Final Project-Info.plist */,
+				AFCDAD971637163F00F76D41 /* DCEZ-Info.plist */,
 				AFCDAD981637163F00F76D41 /* InfoPlist.strings */,
 				AFCDAD9B1637163F00F76D41 /* main.m */,
-				AFCDAD9D1637163F00F76D41 /* Final Project-Prefix.pch */,
+				AFCDAD9D1637163F00F76D41 /* DCEZ-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -198,9 +233,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		AFCDAD8A1637163E00F76D41 /* Final Project */ = {
+		AFCDAD8A1637163E00F76D41 /* DCEZ */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = AFCDADA31637163F00F76D41 /* Build configuration list for PBXNativeTarget "Final Project" */;
+			buildConfigurationList = AFCDADA31637163F00F76D41 /* Build configuration list for PBXNativeTarget "DCEZ" */;
 			buildPhases = (
 				AFCDAD871637163E00F76D41 /* Sources */,
 				AFCDAD881637163E00F76D41 /* Frameworks */,
@@ -210,9 +245,9 @@
 			);
 			dependencies = (
 			);
-			name = "Final Project";
+			name = DCEZ;
 			productName = "Final Project";
-			productReference = AFCDAD8B1637163F00F76D41 /* Final Project.app */;
+			productReference = AFCDAD8B1637163F00F76D41 /* DCEZ.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -223,7 +258,7 @@
 			attributes = {
 				LastUpgradeCheck = 0440;
 			};
-			buildConfigurationList = AFCDAD851637163E00F76D41 /* Build configuration list for PBXProject "Final Project" */;
+			buildConfigurationList = AFCDAD851637163E00F76D41 /* Build configuration list for PBXProject "DCEZ" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -235,7 +270,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				AFCDAD8A1637163E00F76D41 /* Final Project */,
+				AFCDAD8A1637163E00F76D41 /* DCEZ */,
 			);
 		};
 /* End PBXProject section */
@@ -247,6 +282,8 @@
 			files = (
 				AFCDAD9A1637163F00F76D41 /* InfoPlist.strings in Resources */,
 				AFCDADA71637164C00F76D41 /* MainStoryboard.storyboard in Resources */,
+				AF6106491664425E00588519 /* Default@2x.png in Resources */,
+				AF61064B1664426100588519 /* Default.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +312,10 @@
 				AF96A9C916407C12004DD8A8 /* UIImageView+AFNetworking.m in Sources */,
 				AF53459A165AFFCC0082AB1D /* HomeViewController.m in Sources */,
 				AF53459D165B01DC0082AB1D /* SettingsModalViewController.m in Sources */,
+				AFB1C58216642F9F0018FC26 /* PlanRouteViewController.m in Sources */,
+				AF6106431664310800588519 /* FindStationViewController.m in Sources */,
+				AF610647166431A900588519 /* FavViewController.m in Sources */,
+				AFB74F42166D6D1600BA71EE /* MenuViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,9 +386,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Final Project/Final Project-Prefix.pch";
-				INFOPLIST_FILE = "Final Project/Final Project-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Final Project/DCEZ-Prefix.pch";
+				INFOPLIST_FILE = "Final Project/DCEZ-Info.plist";
+				PRODUCT_NAME = DCEZ;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -356,9 +397,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Final Project/Final Project-Prefix.pch";
-				INFOPLIST_FILE = "Final Project/Final Project-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "Final Project/DCEZ-Prefix.pch";
+				INFOPLIST_FILE = "Final Project/DCEZ-Info.plist";
+				PRODUCT_NAME = DCEZ;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -366,7 +407,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		AFCDAD851637163E00F76D41 /* Build configuration list for PBXProject "Final Project" */ = {
+		AFCDAD851637163E00F76D41 /* Build configuration list for PBXProject "DCEZ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AFCDADA11637163F00F76D41 /* Debug */,
@@ -375,7 +416,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		AFCDADA31637163F00F76D41 /* Build configuration list for PBXNativeTarget "Final Project" */ = {
+		AFCDADA31637163F00F76D41 /* Build configuration list for PBXNativeTarget "DCEZ" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AFCDADA41637163F00F76D41 /* Debug */,

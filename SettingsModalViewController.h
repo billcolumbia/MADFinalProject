@@ -10,4 +10,8 @@
 
 @interface SettingsModalViewController : UIViewController
 
+@property (nonatomic, strong) NSString *testString;
+
+-(IBAction) cancelButtonPressed:(id)sender;
+
 @end

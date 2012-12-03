@@ -7,6 +7,7 @@
 //
 
 #import "HomeViewController.h"
+#import "SettingsModalViewController.h"
 
 @interface HomeViewController ()
 
@@ -17,17 +18,23 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
     }
+    
     return self;
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-        NSLog(@"%@",self.navigationController);
-	// Do any additional setup after loading the view.
+	// Do any additional setup after loading the view.    
 }
 
 - (void)viewDidUnload
@@ -39,6 +46,19 @@
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
 {
     return (interfaceOrientation == UIInterfaceOrientationPortrait);
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([segue.identifier isEqualToString:@"homeToSettingsSegue"])
+    {
+        // set the settingsModal VC as the destination.
+        SettingsModalViewController *modalVC = [segue destinationViewController];
+    
+        // set testString property of settings modal to something here.
+        modalVC.testString = @"OHAI SETTINGZ";
+    }
 }
 
 @end

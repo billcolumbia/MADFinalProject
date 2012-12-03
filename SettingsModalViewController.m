@@ -14,11 +14,12 @@
 
 @implementation SettingsModalViewController
 
+@synthesize testString;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        self.navigationController.navigationBarHidden = NO;
         // Custom initialization
     }
     return self;
@@ -26,8 +27,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    self.navigationController.navigationBarHidden = NO;
-    NSLog(@"%@",self.navigationController);
+    NSLog(@"testString in modal: %@",testString);
+    NSLog(@"navController of settings modal: %@",self.navigationController);
 }
 
 - (void)viewDidLoad
@@ -66,5 +67,9 @@
     
 }
 
+-(IBAction)cancelButtonPressed:(id)sender
+{
+    [self dismissModalViewControllerAnimated:YES];
+}
 
 @end
