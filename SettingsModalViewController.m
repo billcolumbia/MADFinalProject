@@ -69,7 +69,8 @@
 
 -(IBAction)cancelButtonPressed:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+//    [self dismissModalViewControllerAnimated:YES];
+    [sender removeFromSuperview];
 }
 
 @end
