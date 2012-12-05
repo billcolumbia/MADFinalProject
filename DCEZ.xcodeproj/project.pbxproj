@@ -37,6 +37,16 @@
 		AFCDAD9C1637163F00F76D41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDAD9B1637163F00F76D41 /* main.m */; };
 		AFCDADA01637163F00F76D41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDAD9F1637163F00F76D41 /* AppDelegate.m */; };
 		AFCDADA71637164C00F76D41 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */; };
+		FB49C476166EAA7800161738 /* fav-routes-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FB49C473166EAA7800161738 /* fav-routes-btn.png */; };
+		FB49C477166EAA7800161738 /* find-stations-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FB49C474166EAA7800161738 /* find-stations-btn.png */; };
+		FB49C478166EAA7800161738 /* plan-a-route-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FB49C475166EAA7800161738 /* plan-a-route-btn.png */; };
+		FB49C47A166EADD200161738 /* NavBar.png in Resources */ = {isa = PBXBuildFile; fileRef = FB49C479166EADD200161738 /* NavBar.png */; };
+		FB49C47C166EAF7E00161738 /* MenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB49C47B166EAF7E00161738 /* MenuButton.png */; };
+		FB49C47E166EB01100161738 /* SettingsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB49C47D166EB01100161738 /* SettingsButton.png */; };
+		FB49C480166EB5C500161738 /* DCEZLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FB49C47F166EB5C500161738 /* DCEZLogo.png */; };
+		FB49C482166EBCDB00161738 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB49C481166EBCDB00161738 /* CloseButton.png */; };
+		FB49C484166EC46B00161738 /* PTN57F.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FB49C483166EC46B00161738 /* PTN57F.ttf */; };
+		FB4DDEC5166FE814008848A3 /* ListButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC4166FE814008848A3 /* ListButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,6 +105,16 @@
 		AFCDAD9E1637163F00F76D41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFCDAD9F1637163F00F76D41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		FB49C473166EAA7800161738 /* fav-routes-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fav-routes-btn.png"; path = "../../../../Desktop/fav-routes-btn.png"; sourceTree = "<group>"; };
+		FB49C474166EAA7800161738 /* find-stations-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "find-stations-btn.png"; path = "../../../../Desktop/find-stations-btn.png"; sourceTree = "<group>"; };
+		FB49C475166EAA7800161738 /* plan-a-route-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "plan-a-route-btn.png"; path = "../../../../Desktop/plan-a-route-btn.png"; sourceTree = "<group>"; };
+		FB49C479166EADD200161738 /* NavBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = NavBar.png; path = ../../../../Desktop/NavBar.png; sourceTree = "<group>"; };
+		FB49C47B166EAF7E00161738 /* MenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = MenuButton.png; path = ../../../../Desktop/MenuButton.png; sourceTree = "<group>"; };
+		FB49C47D166EB01100161738 /* SettingsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = SettingsButton.png; path = ../../../../Desktop/SettingsButton.png; sourceTree = "<group>"; };
+		FB49C47F166EB5C500161738 /* DCEZLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = DCEZLogo.png; path = ../../../../Desktop/DCEZLogo.png; sourceTree = "<group>"; };
+		FB49C481166EBCDB00161738 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = CloseButton.png; path = ../../../../Desktop/CloseButton.png; sourceTree = "<group>"; };
+		FB49C483166EC46B00161738 /* PTN57F.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = PTN57F.ttf; path = "../../../../Downloads/PT-Sans/PTN57F.ttf"; sourceTree = "<group>"; };
+		FB4DDEC4166FE814008848A3 /* ListButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ListButton.png; path = ../../../../Desktop/ListButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +188,16 @@
 			isa = PBXGroup;
 			children = (
 				AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */,
+				FB49C473166EAA7800161738 /* fav-routes-btn.png */,
+				FB49C474166EAA7800161738 /* find-stations-btn.png */,
+				FB49C47F166EB5C500161738 /* DCEZLogo.png */,
+				FB49C483166EC46B00161738 /* PTN57F.ttf */,
+				FB49C47D166EB01100161738 /* SettingsButton.png */,
+				FB4DDEC4166FE814008848A3 /* ListButton.png */,
+				FB49C47B166EAF7E00161738 /* MenuButton.png */,
+				FB49C481166EBCDB00161738 /* CloseButton.png */,
+				FB49C479166EADD200161738 /* NavBar.png */,
+				FB49C475166EAA7800161738 /* plan-a-route-btn.png */,
 				AF0DAE9916389C130036254D /* libsqlite3.dylib */,
 				AF96A9AD16407C12004DD8A8 /* AFNetworking */,
 				AFCDAD951637163F00F76D41 /* Application Files */,
@@ -284,6 +314,16 @@
 				AFCDADA71637164C00F76D41 /* MainStoryboard.storyboard in Resources */,
 				AF6106491664425E00588519 /* Default@2x.png in Resources */,
 				AF61064B1664426100588519 /* Default.png in Resources */,
+				FB49C476166EAA7800161738 /* fav-routes-btn.png in Resources */,
+				FB49C477166EAA7800161738 /* find-stations-btn.png in Resources */,
+				FB49C478166EAA7800161738 /* plan-a-route-btn.png in Resources */,
+				FB49C47A166EADD200161738 /* NavBar.png in Resources */,
+				FB49C47C166EAF7E00161738 /* MenuButton.png in Resources */,
+				FB49C47E166EB01100161738 /* SettingsButton.png in Resources */,
+				FB49C480166EB5C500161738 /* DCEZLogo.png in Resources */,
+				FB49C482166EBCDB00161738 /* CloseButton.png in Resources */,
+				FB49C484166EC46B00161738 /* PTN57F.ttf in Resources */,
+				FB4DDEC5166FE814008848A3 /* ListButton.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
