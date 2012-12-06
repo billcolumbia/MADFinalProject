@@ -49,20 +49,14 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
         NSLog(@"API JSON request %@ success!",request);
         
         // first, capture JSON
-        
-        NSError *jsonError = nil;
-        
-        //redLineStationsArray = [NSJSONSerialization JSONObjectWithData:JSON options:0 error:&jsonError];
+                
         redLineStationsDictionary = JSON;
-        //NSArray *dArray = [redLineStationsDictionary objectForKey:@"Stations"];
-        //NSDictionary *dArraydict = [dArray objectAtIndex:5];
-        //NSString *dArraydictlat = [dArraydict objectForKey:@"lat"];
-        
-        //NSString *dArrayDictionaryLatitude = redLineStationsDictionary[@"Stations"][5][@"Lat"];
-        //NSLog(@"lat: %@",dArrayDictionaryLatitude);
-        
+                      
         NSString *dArrayDictionaryLatitude = redLineStationsDictionary[@"Stations"][5][@"Lat"];
-        NSLog(@"lat: %@",dArrayDictionaryLatitude);
+//        NSLog(@"lat: %@",dArrayDictionaryLatitude);        
+        
+        NSString *testString = redLineStationsDictionary[@"Stations"];
+//        NSLog(@"all red line stations: %@",testString);                    
         
         // call custom callback function that does stuff with JSON and pass in the response JSON.
         
@@ -121,6 +115,18 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
     if (cell == nil)
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
+    // get JSON from variable
+    NSDictionary *stations = redLineStationsDictionary[@"Stations"];
+//    NSLog(@"stations: %@",stations);
+    NSInteger *jsonCount = [redLineStationsDictionary[@"Stations"] count];
+    NSInteger *i;
+    
+    
+    for (i=0; i<jsonCount; i++)
+    {
+        NSLog(@"hi, i: %i",i);
     }
     
     // Configure the cell...
