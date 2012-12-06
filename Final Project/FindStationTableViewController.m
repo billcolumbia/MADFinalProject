@@ -52,11 +52,22 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
         
         NSError *jsonError = nil;
         
-        redLineStationsArray= [NSJSONSerialization JSONObjectWithData:JSON options:0 error:&jsonError];
+        //redLineStationsArray = [NSJSONSerialization JSONObjectWithData:JSON options:0 error:&jsonError];
+        redLineStationsDictionary = JSON;
+        //NSArray *dArray = [redLineStationsDictionary objectForKey:@"Stations"];
+        //NSDictionary *dArraydict = [dArray objectAtIndex:5];
+        //NSString *dArraydictlat = [dArraydict objectForKey:@"lat"];
+        
+        //NSString *dArrayDictionaryLatitude = redLineStationsDictionary[@"Stations"][5][@"Lat"];
+        //NSLog(@"lat: %@",dArrayDictionaryLatitude);
+        
+        NSString *dArrayDictionaryLatitude = redLineStationsDictionary[@"Stations"][5][@"Lat"];
+        NSLog(@"lat: %@",dArrayDictionaryLatitude);
         
         // call custom callback function that does stuff with JSON and pass in the response JSON.
         
-        // reload tableView 
+        // reload tableView
+        
         [self.tableView reloadData];            
     }
     failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
@@ -99,7 +110,7 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return redLineStationsArray.count;
+    return [redLineStationsDictionary[@"Stations"] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
