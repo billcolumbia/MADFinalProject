@@ -239,12 +239,12 @@
 				AF67BA6E166FF13A0078FA78 /* FindStationTableViewController.m */,
 				AF534598165AFFCC0082AB1D /* HomeViewController.h */,
 				AF534599165AFFCC0082AB1D /* HomeViewController.m */,
+				AFB74F40166D6D1600BA71EE /* MenuViewController.h */,
+				AFB74F41166D6D1600BA71EE /* MenuViewController.m */,
 				AFB1C58016642F9F0018FC26 /* PlanRouteViewController.h */,
 				AFB1C58116642F9F0018FC26 /* PlanRouteViewController.m */,
 				AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */,
 				AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */,
-				AFB74F40166D6D1600BA71EE /* MenuViewController.h */,
-				AFB74F41166D6D1600BA71EE /* MenuViewController.m */,
 				AFCDAD961637163F00F76D41 /* Supporting Files */,
 			);
 			name = "Application Files";
@@ -395,7 +395,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
@@ -415,7 +415,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;

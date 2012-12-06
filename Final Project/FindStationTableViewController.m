@@ -15,7 +15,7 @@
 
 @implementation FindStationTableViewController
 
-@synthesize stationsTableView, redLineStationsJSON;
+@synthesize stationsTableView, redLineStationsDictionary, redLineStationsArray;
 
 NSString *urlString = @"http://api.wmata.com/Rail.svc/json/JStations?LineCode=RD&api_key=";
 NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
@@ -23,7 +23,8 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
     }
     return self;
@@ -44,24 +45,30 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
     AFJSONRequestOperation *apiOperation = [AFJSONRequestOperation JSONRequestOperationWithRequest:apiRequest
     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
     {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
         NSLog(@"API JSON request %@ success!",request);
         
-        // first capture JSON        
-        redLineStationsJSON = JSON;
+        // first, capture JSON
+        
+        NSError *jsonError = nil;
+        
+        redLineStationsArray= [NSJSONSerialization JSONObjectWithData:JSON options:0 error:&jsonError];
         
         // call custom callback function that does stuff with JSON and pass in the response JSON.
-        [self processJSON:redLineStationsJSON];
         
-        [self.tableView reloadData];
-//        [stationsTableView reloadData];
+        // reload tableView 
+        [self.tableView reloadData];            
     }
     failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
     {
+        [UIApplication sharedApplication].networkActivityIndicatorVisible=YES;
         NSLog(@"API JSON request fail :( ");
         NSLog(@"Error: %@", error);
     }];
     
-    [apiOperation start];    
+    [apiOperation start];
+    [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
+
 }
 
 - (void)viewDidLoad
@@ -92,18 +99,7 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-//    if (!redLineStationsJSON || !redLineStationsJSON.count)
-//    {
-//        return 0;
-//    }
-//    else
-//    {
-//        NSLog(@"Reloaded tableview with JSON");
-//        NSLog(@"Stations: %",[redLineStationsJSON objectForKey:@"Stations"]);
-//        NSLog(@"redLineStationsJSON.count: %i",redLineStationsJSON.count);
-//        return redLineStationsJSON.count;
-//    }
-    return 0;
+    return redLineStationsArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -111,14 +107,15 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
     static NSString *CellIdentifier = @"Cell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
     // Configure the cell...
+    cell.textLabel.text= @"hey there slick";
     
     return cell;
-}
-
--(void)processJSON:(NSDictionary*)responseJSON
-{
-    NSLog(@"JSON in FindStationVC is %@",responseJSON);
 }
 
 /*

@@ -11,6 +11,7 @@
 @interface FindStationTableViewController : UITableViewController
 
 @property (nonatomic, strong) IBOutlet UITableView *stationsTableView;
-@property (nonatomic, strong) NSDictionary *redLineStationsJSON;
+@property (nonatomic, strong) NSArray *redLineStationsArray;
+@property (nonatomic, strong) NSDictionary *redLineStationsDictionary;
 
 @end
