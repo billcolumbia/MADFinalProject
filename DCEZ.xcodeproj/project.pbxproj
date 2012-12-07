@@ -153,18 +153,11 @@
 			name = FMDB;
 			sourceTree = "<group>";
 		};
-		AF61064C1664444D00588519 /* Image Assets */ = {
+		AF67BA6C166FF11A0078FA78 /* Image assets */ = {
 			isa = PBXGroup;
 			children = (
 				AF61064A1664426100588519 /* Default.png */,
 				AF6106481664425E00588519 /* Default@2x.png */,
-			);
-			name = "Image Assets";
-			sourceTree = "<group>";
-		};
-		AF67BA6C166FF11A0078FA78 /* Image assets */ = {
-			isa = PBXGroup;
-			children = (
 				AFC382DD1671972500CDC006 /* Default-568h@2x.png */,
 				FB4DDEC7166FEEC2008848A3 /* CloseButton.png */,
 				FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */,
@@ -209,12 +202,11 @@
 			children = (
 				AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */,
 				AF0DAE9916389C130036254D /* libsqlite3.dylib */,
-				AF67BA6C166FF11A0078FA78 /* Image assets */,
 				AF96A9AD16407C12004DD8A8 /* AFNetworking */,
 				AFCDAD951637163F00F76D41 /* Application Files */,
 				AF0DAE9816389BCE0036254D /* FMDB */,
 				AFCDAD8E1637163F00F76D41 /* Frameworks */,
-				AF61064C1664444D00588519 /* Image Assets */,
+				AF67BA6C166FF11A0078FA78 /* Image assets */,
 				AFCDAD8C1637163F00F76D41 /* Products */,
 			);
 			sourceTree = "<group>";
