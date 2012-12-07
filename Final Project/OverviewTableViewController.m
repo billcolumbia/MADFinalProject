@@ -18,7 +18,6 @@
 
 
 @synthesize overviewStationsDictionary, departureStationCodeForRequest, destinationStationCodeForRequest, appDel;
-                               //api.wmata.com/Rail.svc/json/JPath?FromStationCode=A10&ToStationCode=B05&api_key=
 
 NSString *pathUrlString = @"http://api.wmata.com/Rail.svc/json/JPath?FromStationCode=";
 NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
@@ -37,6 +36,7 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     pathUrlString = @"http://api.wmata.com/Rail.svc/json/JPath?FromStationCode=";
+    
     // test delegate vars     
     appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];    
     NSLog(@"departure code in overview : %@",appDel.departureStationCode);
@@ -47,48 +47,38 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
     pathUrlString = [pathUrlString stringByAppendingString:@"&ToStationCode="];
     pathUrlString = [pathUrlString stringByAppendingString:appDel.destinationStationCode];
     pathUrlString = [pathUrlString stringByAppendingString:@"&api_key="];
+    pathUrlString =[pathUrlString stringByAppendingString:pathKeyString];
     
-    // for some reason, this request already has the key.
-//    pathUrlString = [pathUrlString stringByAppendingString:pathKeyString];
-    
-    NSLog(@"key: %@",pathKeyString);
-    NSLog(@"total url: %@", pathUrlString);
-    
-    // make request
+    NSLog(@"Final URL: %@", pathUrlString);
     
     // show spinning indicator on status bar to demonstrate downloading is happening.
     [UIApplication sharedApplication].networkActivityIndicatorVisible=YES;
     
-    // here pull API info for the station selected
-    pathUrlString =[pathUrlString stringByAppendingString:pathKeyString];
+    // here make API request for the path between the two stations
     NSURL *apiURL = [NSURL URLWithString:pathUrlString];
     NSURLRequest *apiRequest = [NSURLRequest requestWithURL:apiURL];
     
     AFJSONRequestOperation *apiOperation = [AFJSONRequestOperation JSONRequestOperationWithRequest:apiRequest
     success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
     {
+        // Downloading done. Don't show spinning indicator.
         [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
-        NSLog(@"API JSON request %@ success!",request);
+        NSLog(@"API JSON request success!");
         
-        // first, capture JSON
-        
+        // capture JSON
         overviewStationsDictionary = JSON;
         
-        NSString *testString = overviewStationsDictionary[@"Stations"];
-        // NSLog(@"all red line stations: %@",testString);
-        
-        // reload tableView
         [self.tableView reloadData];
     }
     failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
     {
+        // Downloading done. Don't show spinning indicator.        
         [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
         NSLog(@"API JSON request fail :( ");
         NSLog(@"Error: %@", error);
     }];
     
     [apiOperation start];    
-
 }
 
 - (void)viewDidLoad
@@ -137,9 +127,7 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
     {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
-    
-    // NSLog(@"TableView Section: %d, Row: %d", indexPath.section, indexPath.row);
-    
+        
     // Configure the cell...    
     // cell text label set to station names
     cell.textLabel.text= overviewStationsDictionary[@"Path"][indexPath.row][@"StationName"];
@@ -147,11 +135,9 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
     return cell;
 }
 
-#pragma mark - Table view delegate
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    [self performSegueWithIdentifier:@"ToOverview" sender:indexPath];
+
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

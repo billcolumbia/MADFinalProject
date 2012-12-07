@@ -35,7 +35,6 @@
     // get local copy of redLineStationsDictionary from appDelegate.
     appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     redLineStationsDictionary = appDel.redLineStationsDictionary;
-    NSLog(@"redLineStationDictionary in ChooseDestination is: %@",redLineStationsDictionary);
 }
 
 - (void)viewDidLoad
@@ -66,7 +65,6 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    NSLog(@"In choose destination, redlinejson count: %i",[redLineStationsDictionary[@"Stations"] count]);
     return [redLineStationsDictionary[@"Stations"] count];
 }
 
