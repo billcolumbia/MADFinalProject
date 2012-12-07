@@ -32,6 +32,7 @@
 		AFC382D316717BDB00CDC006 /* ChooseDestinationStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC382D216717BDB00CDC006 /* ChooseDestinationStationViewController.m */; };
 		AFC382D916717F5500CDC006 /* FindStationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC382D816717F5500CDC006 /* FindStationTableViewController.m */; };
 		AFC382DC167187C500CDC006 /* OverviewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC382DB167187C500CDC006 /* OverviewTableViewController.m */; };
+		AFC382DE1671972500CDC006 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC382DD1671972500CDC006 /* Default-568h@2x.png */; };
 		AFCDAD901637163F00F76D41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCDAD8F1637163F00F76D41 /* UIKit.framework */; };
 		AFCDAD921637163F00F76D41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCDAD911637163F00F76D41 /* Foundation.framework */; };
 		AFCDAD941637163F00F76D41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCDAD931637163F00F76D41 /* CoreGraphics.framework */; };
@@ -98,6 +99,7 @@
 		AFC382D816717F5500CDC006 /* FindStationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindStationTableViewController.m; path = ../FindStationTableViewController.m; sourceTree = "<group>"; };
 		AFC382DA167187C500CDC006 /* OverviewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewTableViewController.h; sourceTree = "<group>"; };
 		AFC382DB167187C500CDC006 /* OverviewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewTableViewController.m; sourceTree = "<group>"; };
+		AFC382DD1671972500CDC006 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		AFCDAD8B1637163F00F76D41 /* DCEZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCEZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCDAD8F1637163F00F76D41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFCDAD911637163F00F76D41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -204,6 +206,7 @@
 		AFCDAD801637163E00F76D41 = {
 			isa = PBXGroup;
 			children = (
+				AFC382DD1671972500CDC006 /* Default-568h@2x.png */,
 				AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */,
 				AF0DAE9916389C130036254D /* libsqlite3.dylib */,
 				AF67BA6C166FF11A0078FA78 /* Image assets */,
@@ -334,6 +337,7 @@
 				FB4DDED4166FEEC3008848A3 /* MenuButton.png in Resources */,
 				FB4DDED5166FEEC3008848A3 /* plan-a-route-btn.png in Resources */,
 				FB4DDED6166FEEC3008848A3 /* SettingsButton.png in Resources */,
+				AFC382DE1671972500CDC006 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

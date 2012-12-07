@@ -27,8 +27,8 @@
 
 - (void)viewWillAppear:(BOOL)animated
 {
-    NSLog(@"testString in modal: %@",testString);
-    NSLog(@"navController of settings modal: %@",self.navigationController);
+//    NSLog(@"testString in modal: %@",testString);
+//    NSLog(@"navController of settings modal: %@",self.navigationController);
 }
 
 - (void)viewDidLoad
@@ -69,7 +69,10 @@
 
 - (IBAction)cancelButtonPressed:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [ self dismissViewControllerAnimated:YES completion:^(void)
+      {
+          NSLog(@"Dismissed view");
+      }];    
 }
 
 @end

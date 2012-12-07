@@ -17,7 +17,8 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
     }
     return self;
@@ -42,7 +43,10 @@
 
 - (IBAction)cancelButtonPressed:(id)sender
 {
-    [self dismissModalViewControllerAnimated:YES];
+    [ self dismissViewControllerAnimated:YES completion:^(void)
+     {
+         NSLog(@"Dismissed view");
+     }];
 }
 
 @end
