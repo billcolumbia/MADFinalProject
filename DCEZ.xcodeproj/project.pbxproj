@@ -18,7 +18,6 @@
 		AF610647166431A900588519 /* FavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF610646166431A900588519 /* FavViewController.m */; };
 		AF6106491664425E00588519 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6106481664425E00588519 /* Default@2x.png */; };
 		AF61064B1664426100588519 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61064A1664426100588519 /* Default.png */; };
-		AF67BA6F166FF13A0078FA78 /* FindStationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF67BA6E166FF13A0078FA78 /* FindStationTableViewController.m */; };
 		AF96A9C116407C12004DD8A8 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9AF16407C12004DD8A8 /* AFHTTPClient.m */; };
 		AF96A9C216407C12004DD8A8 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9B116407C12004DD8A8 /* AFHTTPRequestOperation.m */; };
 		AF96A9C316407C12004DD8A8 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9B316407C12004DD8A8 /* AFImageRequestOperation.m */; };
@@ -28,8 +27,11 @@
 		AF96A9C716407C12004DD8A8 /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9BC16407C12004DD8A8 /* AFURLConnectionOperation.m */; };
 		AF96A9C816407C12004DD8A8 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9BE16407C12004DD8A8 /* AFXMLRequestOperation.m */; };
 		AF96A9C916407C12004DD8A8 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9C016407C12004DD8A8 /* UIImageView+AFNetworking.m */; };
-		AFB1C58216642F9F0018FC26 /* PlanRouteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB1C58116642F9F0018FC26 /* PlanRouteViewController.m */; };
 		AFB74F42166D6D1600BA71EE /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB74F41166D6D1600BA71EE /* MenuViewController.m */; };
+		AFC382D016717BD000CDC006 /* ChooseDepartureStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC382CF16717BD000CDC006 /* ChooseDepartureStationViewController.m */; };
+		AFC382D316717BDB00CDC006 /* ChooseDestinationStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC382D216717BDB00CDC006 /* ChooseDestinationStationViewController.m */; };
+		AFC382D916717F5500CDC006 /* FindStationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC382D816717F5500CDC006 /* FindStationTableViewController.m */; };
+		AFC382DC167187C500CDC006 /* OverviewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC382DB167187C500CDC006 /* OverviewTableViewController.m */; };
 		AFCDAD901637163F00F76D41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCDAD8F1637163F00F76D41 /* UIKit.framework */; };
 		AFCDAD921637163F00F76D41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCDAD911637163F00F76D41 /* Foundation.framework */; };
 		AFCDAD941637163F00F76D41 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCDAD931637163F00F76D41 /* CoreGraphics.framework */; };
@@ -67,8 +69,6 @@
 		AF610646166431A900588519 /* FavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavViewController.m; path = ../FavViewController.m; sourceTree = "<group>"; };
 		AF6106481664425E00588519 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AF61064A1664426100588519 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		AF67BA6D166FF13A0078FA78 /* FindStationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FindStationTableViewController.h; sourceTree = "<group>"; };
-		AF67BA6E166FF13A0078FA78 /* FindStationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FindStationTableViewController.m; sourceTree = "<group>"; };
 		AF96A9AE16407C12004DD8A8 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		AF96A9AF16407C12004DD8A8 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		AF96A9B016407C12004DD8A8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -88,10 +88,16 @@
 		AF96A9BE16407C12004DD8A8 /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		AF96A9BF16407C12004DD8A8 /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		AF96A9C016407C12004DD8A8 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
-		AFB1C58016642F9F0018FC26 /* PlanRouteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PlanRouteViewController.h; path = ../PlanRouteViewController.h; sourceTree = "<group>"; };
-		AFB1C58116642F9F0018FC26 /* PlanRouteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PlanRouteViewController.m; path = ../PlanRouteViewController.m; sourceTree = "<group>"; };
 		AFB74F40166D6D1600BA71EE /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
 		AFB74F41166D6D1600BA71EE /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		AFC382CE16717BD000CDC006 /* ChooseDepartureStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseDepartureStationViewController.h; path = ../ChooseDepartureStationViewController.h; sourceTree = "<group>"; };
+		AFC382CF16717BD000CDC006 /* ChooseDepartureStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseDepartureStationViewController.m; path = ../ChooseDepartureStationViewController.m; sourceTree = "<group>"; };
+		AFC382D116717BDB00CDC006 /* ChooseDestinationStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseDestinationStationViewController.h; path = ../ChooseDestinationStationViewController.h; sourceTree = "<group>"; };
+		AFC382D216717BDB00CDC006 /* ChooseDestinationStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseDestinationStationViewController.m; path = ../ChooseDestinationStationViewController.m; sourceTree = "<group>"; };
+		AFC382D716717F5500CDC006 /* FindStationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindStationTableViewController.h; path = ../FindStationTableViewController.h; sourceTree = "<group>"; };
+		AFC382D816717F5500CDC006 /* FindStationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindStationTableViewController.m; path = ../FindStationTableViewController.m; sourceTree = "<group>"; };
+		AFC382DA167187C500CDC006 /* OverviewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewTableViewController.h; sourceTree = "<group>"; };
+		AFC382DB167187C500CDC006 /* OverviewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewTableViewController.m; sourceTree = "<group>"; };
 		AFCDAD8B1637163F00F76D41 /* DCEZ.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DCEZ.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFCDAD8F1637163F00F76D41 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		AFCDAD911637163F00F76D41 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -233,16 +239,20 @@
 			children = (
 				AFCDAD9E1637163F00F76D41 /* AppDelegate.h */,
 				AFCDAD9F1637163F00F76D41 /* AppDelegate.m */,
+				AFC382CE16717BD000CDC006 /* ChooseDepartureStationViewController.h */,
+				AFC382CF16717BD000CDC006 /* ChooseDepartureStationViewController.m */,
+				AFC382D116717BDB00CDC006 /* ChooseDestinationStationViewController.h */,
+				AFC382D216717BDB00CDC006 /* ChooseDestinationStationViewController.m */,
 				AF610645166431A900588519 /* FavViewController.h */,
 				AF610646166431A900588519 /* FavViewController.m */,
-				AF67BA6D166FF13A0078FA78 /* FindStationTableViewController.h */,
-				AF67BA6E166FF13A0078FA78 /* FindStationTableViewController.m */,
+				AFC382D716717F5500CDC006 /* FindStationTableViewController.h */,
+				AFC382D816717F5500CDC006 /* FindStationTableViewController.m */,
 				AF534598165AFFCC0082AB1D /* HomeViewController.h */,
 				AF534599165AFFCC0082AB1D /* HomeViewController.m */,
 				AFB74F40166D6D1600BA71EE /* MenuViewController.h */,
 				AFB74F41166D6D1600BA71EE /* MenuViewController.m */,
-				AFB1C58016642F9F0018FC26 /* PlanRouteViewController.h */,
-				AFB1C58116642F9F0018FC26 /* PlanRouteViewController.m */,
+				AFC382DA167187C500CDC006 /* OverviewTableViewController.h */,
+				AFC382DB167187C500CDC006 /* OverviewTableViewController.m */,
 				AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */,
 				AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */,
 				AFCDAD961637163F00F76D41 /* Supporting Files */,
@@ -352,10 +362,12 @@
 				AF96A9C916407C12004DD8A8 /* UIImageView+AFNetworking.m in Sources */,
 				AF53459A165AFFCC0082AB1D /* HomeViewController.m in Sources */,
 				AF53459D165B01DC0082AB1D /* SettingsModalViewController.m in Sources */,
-				AFB1C58216642F9F0018FC26 /* PlanRouteViewController.m in Sources */,
 				AF610647166431A900588519 /* FavViewController.m in Sources */,
 				AFB74F42166D6D1600BA71EE /* MenuViewController.m in Sources */,
-				AF67BA6F166FF13A0078FA78 /* FindStationTableViewController.m in Sources */,
+				AFC382D016717BD000CDC006 /* ChooseDepartureStationViewController.m in Sources */,
+				AFC382D316717BDB00CDC006 /* ChooseDestinationStationViewController.m in Sources */,
+				AFC382D916717F5500CDC006 /* FindStationTableViewController.m in Sources */,
+				AFC382DC167187C500CDC006 /* OverviewTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

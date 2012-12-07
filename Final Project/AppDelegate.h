@@ -12,5 +12,7 @@
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+@property (strong, nonatomic) NSString *departureStationCode;
+@property (strong, nonatomic) NSString *destinationStationCode;
 
 @end
