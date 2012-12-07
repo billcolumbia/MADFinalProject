@@ -29,7 +29,6 @@
 		AFB74F42166D6D1600BA71EE /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB74F41166D6D1600BA71EE /* MenuViewController.m */; };
 		AFC382D016717BD000CDC006 /* ChooseDepartureStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC382CF16717BD000CDC006 /* ChooseDepartureStationViewController.m */; };
 		AFC382D316717BDB00CDC006 /* ChooseDestinationStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC382D216717BDB00CDC006 /* ChooseDestinationStationViewController.m */; };
-		AFC382D916717F5500CDC006 /* FindStationTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC382D816717F5500CDC006 /* FindStationTableViewController.m */; };
 		AFC382DC167187C500CDC006 /* OverviewTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFC382DB167187C500CDC006 /* OverviewTableViewController.m */; };
 		AFC382DE1671972500CDC006 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AFC382DD1671972500CDC006 /* Default-568h@2x.png */; };
 		AFCDAD901637163F00F76D41 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCDAD8F1637163F00F76D41 /* UIKit.framework */; };
@@ -39,6 +38,7 @@
 		AFCDAD9C1637163F00F76D41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDAD9B1637163F00F76D41 /* main.m */; };
 		AFCDADA01637163F00F76D41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDAD9F1637163F00F76D41 /* AppDelegate.m */; };
 		AFCDADA71637164C00F76D41 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */; };
+		AFCED321167273B800A24240 /* FindStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCED320167273B800A24240 /* FindStationViewController.m */; };
 		AFDCC46816719CE300447A7B /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDCC46716719CE300447A7B /* FavoritesTableViewController.m */; };
 		FB4DDECF166FEEC3008848A3 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC7166FEEC2008848A3 /* CloseButton.png */; };
 		FB4DDED0166FEEC3008848A3 /* DCEZLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */; };
@@ -93,8 +93,6 @@
 		AFC382CF16717BD000CDC006 /* ChooseDepartureStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseDepartureStationViewController.m; path = ../ChooseDepartureStationViewController.m; sourceTree = "<group>"; };
 		AFC382D116717BDB00CDC006 /* ChooseDestinationStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ChooseDestinationStationViewController.h; path = ../ChooseDestinationStationViewController.h; sourceTree = "<group>"; };
 		AFC382D216717BDB00CDC006 /* ChooseDestinationStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ChooseDestinationStationViewController.m; path = ../ChooseDestinationStationViewController.m; sourceTree = "<group>"; };
-		AFC382D716717F5500CDC006 /* FindStationTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindStationTableViewController.h; path = ../FindStationTableViewController.h; sourceTree = "<group>"; };
-		AFC382D816717F5500CDC006 /* FindStationTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindStationTableViewController.m; path = ../FindStationTableViewController.m; sourceTree = "<group>"; };
 		AFC382DA167187C500CDC006 /* OverviewTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverviewTableViewController.h; sourceTree = "<group>"; };
 		AFC382DB167187C500CDC006 /* OverviewTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OverviewTableViewController.m; sourceTree = "<group>"; };
 		AFC382DD1671972500CDC006 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -109,6 +107,8 @@
 		AFCDAD9E1637163F00F76D41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFCDAD9F1637163F00F76D41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		AFCED31F167273B800A24240 /* FindStationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindStationViewController.h; path = ../FindStationViewController.h; sourceTree = "<group>"; };
+		AFCED320167273B800A24240 /* FindStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindStationViewController.m; path = ../FindStationViewController.m; sourceTree = "<group>"; };
 		AFDCC46616719CE300447A7B /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoritesTableViewController.h; path = ../FavoritesTableViewController.h; sourceTree = "<group>"; };
 		AFDCC46716719CE300447A7B /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoritesTableViewController.m; path = ../FavoritesTableViewController.m; sourceTree = "<group>"; };
 		FB4DDEC7166FEEC2008848A3 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
@@ -240,8 +240,8 @@
 				AFC382D216717BDB00CDC006 /* ChooseDestinationStationViewController.m */,
 				AFDCC46616719CE300447A7B /* FavoritesTableViewController.h */,
 				AFDCC46716719CE300447A7B /* FavoritesTableViewController.m */,
-				AFC382D716717F5500CDC006 /* FindStationTableViewController.h */,
-				AFC382D816717F5500CDC006 /* FindStationTableViewController.m */,
+				AFCED31F167273B800A24240 /* FindStationViewController.h */,
+				AFCED320167273B800A24240 /* FindStationViewController.m */,
 				AF534598165AFFCC0082AB1D /* HomeViewController.h */,
 				AF534599165AFFCC0082AB1D /* HomeViewController.m */,
 				AFB74F40166D6D1600BA71EE /* MenuViewController.h */,
@@ -361,9 +361,9 @@
 				AFB74F42166D6D1600BA71EE /* MenuViewController.m in Sources */,
 				AFC382D016717BD000CDC006 /* ChooseDepartureStationViewController.m in Sources */,
 				AFC382D316717BDB00CDC006 /* ChooseDestinationStationViewController.m in Sources */,
-				AFC382D916717F5500CDC006 /* FindStationTableViewController.m in Sources */,
 				AFC382DC167187C500CDC006 /* OverviewTableViewController.m in Sources */,
 				AFDCC46816719CE300447A7B /* FavoritesTableViewController.m in Sources */,
+				AFCED321167273B800A24240 /* FindStationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

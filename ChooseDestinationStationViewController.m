@@ -8,7 +8,6 @@
 
 #import "ChooseDestinationStationViewController.h"
 #import "AppDelegate.h"
-#import "AFNetworking.h"
 
 @interface ChooseDestinationStationViewController ()
 
@@ -17,10 +16,7 @@
 @implementation ChooseDestinationStationViewController
 
 
-@synthesize redLineStationsDictionary;
-
-NSString *urlString2 = @"http://api.wmata.com/Rail.svc/json/JStations?LineCode=RD&api_key=";
-NSString *keyString2 = @"bezj8khcsbj4jmsy6km4tjrm";
+@synthesize redLineStationsDictionary, appDel;
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -35,6 +31,11 @@ NSString *keyString2 = @"bezj8khcsbj4jmsy6km4tjrm";
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    // get local copy of redLineStationsDictionary from appDelegate.
+    appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    redLineStationsDictionary = appDel.redLineStationsDictionary;
+    NSLog(@"redLineStationDictionary in ChooseDestination is: %@",redLineStationsDictionary);
 }
 
 - (void)viewDidLoad
@@ -45,40 +46,7 @@ NSString *keyString2 = @"bezj8khcsbj4jmsy6km4tjrm";
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-    
-    // show spinning indicator on status bar to demonstrate downloading is happening.
-    [UIApplication sharedApplication].networkActivityIndicatorVisible=YES;
-    
-    // here pull API info for the station selected
-    urlString2 =[urlString2 stringByAppendingString:keyString2];
-    NSURL *apiURL = [NSURL URLWithString:urlString2];
-    NSURLRequest *apiRequest = [NSURLRequest requestWithURL:apiURL];
-    
-    AFJSONRequestOperation *apiOperation = [AFJSONRequestOperation JSONRequestOperationWithRequest:apiRequest
-    success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
-    {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
-        NSLog(@"API JSON request %@ success!",request);
-        
-        // first, capture JSON
-        
-        redLineStationsDictionary = JSON;
-        
-        NSString *testString = redLineStationsDictionary[@"Stations"];
-        // NSLog(@"all red line stations: %@",testString);
-        
-        // reload tableView
-        [self.tableView reloadData];
-    }
-    failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
-    {
-        [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
-        NSLog(@"API JSON request fail :( ");
-        NSLog(@"Error: %@", error);
-    }];
-    
-    [apiOperation start];    
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;   
 }
 
 - (void)viewDidUnload
@@ -98,6 +66,7 @@ NSString *keyString2 = @"bezj8khcsbj4jmsy6km4tjrm";
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
+    NSLog(@"In choose destination, redlinejson count: %i",[redLineStationsDictionary[@"Stations"] count]);
     return [redLineStationsDictionary[@"Stations"] count];
 }
 
@@ -131,7 +100,6 @@ NSString *keyString2 = @"bezj8khcsbj4jmsy6km4tjrm";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     // add selected station's code to delegate variable
-    AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     appDel.destinationStationCode = redLineStationsDictionary[@"Stations"][indexPath.row][@"Code"];
     NSLog(@"destination station code: %@",appDel.destinationStationCode);
 

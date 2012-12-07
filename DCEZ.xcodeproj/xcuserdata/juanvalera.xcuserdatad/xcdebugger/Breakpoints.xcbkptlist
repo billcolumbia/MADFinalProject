@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "ChooseDepartureStationViewController.m"
-         timestampString = "376538577.766337"
+         timestampString = "376597923.31469"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "139"
-         endingLineNumber = "139"
+         startingLineNumber = "106"
+         endingLineNumber = "106"
          landmarkName = "-tableView:didSelectRowAtIndexPath:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -60,11 +60,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Final Project/OverviewTableViewController.m"
-         timestampString = "376541989.076447"
+         timestampString = "376597042.390646"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "78"
-         endingLineNumber = "78"
+         startingLineNumber = "77"
+         endingLineNumber = "77"
          landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "Final Project/OverviewTableViewController.m"
-         timestampString = "376541977.797735"
+         timestampString = "376597042.390646"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "82"
-         endingLineNumber = "82"
+         startingLineNumber = "81"
+         endingLineNumber = "81"
          landmarkName = "-viewWillAppear:"
          landmarkType = "5">
       </FileBreakpoint>

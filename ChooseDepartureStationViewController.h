@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 @interface ChooseDepartureStationViewController : UITableViewController
 
 @property (nonatomic, strong) NSDictionary *redLineStationsDictionary;
+@property (nonatomic, strong) AppDelegate *appDel;
 
 @end

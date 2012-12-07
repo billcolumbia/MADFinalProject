@@ -7,11 +7,49 @@
 //
 
 #import "AppDelegate.h"
+#import "AFNetworking.h"
 
 @implementation AppDelegate
 
+@synthesize redLineStationsDictionary, appDel;
+
+// url strings to request all the red line stations
+NSString *urlString = @"http://api.wmata.com/Rail.svc/json/JStations?LineCode=RD&api_key=";
+NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+     // show spinning indicator on status bar to demonstrate downloading is happening.
+    [UIApplication sharedApplication].networkActivityIndicatorVisible=YES;
+    
+    // here pull API info for the station selected    
+    urlString =[urlString stringByAppendingString:keyString];    
+    NSURL *apiURL = [NSURL URLWithString:urlString];
+    NSURLRequest *apiRequest = [NSURLRequest requestWithURL:apiURL];
+    
+    AFJSONRequestOperation *apiOperation = [AFJSONRequestOperation JSONRequestOperationWithRequest:apiRequest
+    success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
+    {
+         // Download done, stop spinning indicator.
+        [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
+        NSLog(@"API JSON request %@ success in AppDel!",request);
+        
+        //capture JSON, store here and in appDel var.
+        appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        appDel.redLineStationsDictionary = JSON;
+        redLineStationsDictionary = JSON;                              
+    }
+    failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
+    {
+        // Download stopped/failed, stop spinning indicator.        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
+        
+        NSLog(@"API JSON request fail :( ");
+        NSLog(@"Error: %@", error);
+    }];
+    
+    [apiOperation start];
+
     return YES;
 }
 

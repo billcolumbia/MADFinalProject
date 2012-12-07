@@ -7,11 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppDelegate.h"
 
 @interface OverviewTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSDictionary *overviewStationsDictionary;
 @property (nonatomic, strong) NSString *departureStationCodeForRequest;
 @property (nonatomic, strong) NSString *destinationStationCodeForRequest;
+@property (nonatomic, strong) AppDelegate *appDel;
 
 @end

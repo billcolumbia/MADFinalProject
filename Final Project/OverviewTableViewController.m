@@ -17,11 +17,11 @@
 @implementation OverviewTableViewController
 
 
-@synthesize overviewStationsDictionary, departureStationCodeForRequest, destinationStationCodeForRequest;
+@synthesize overviewStationsDictionary, departureStationCodeForRequest, destinationStationCodeForRequest, appDel;
                                //api.wmata.com/Rail.svc/json/JPath?FromStationCode=A10&ToStationCode=B05&api_key=
 
-NSString *urlString3 = @"http://api.wmata.com/Rail.svc/json/JPath?FromStationCode=";
-NSString *keyString3 = @"bezj8khcsbj4jmsy6km4tjrm";
+NSString *pathUrlString = @"http://api.wmata.com/Rail.svc/json/JPath?FromStationCode=";
+NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -36,24 +36,23 @@ NSString *keyString3 = @"bezj8khcsbj4jmsy6km4tjrm";
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    
-    
+        
     // test delegate vars     
-    AppDelegate *appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];    
+    appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];    
     NSLog(@"departure code in overview : %@",appDel.departureStationCode);
     NSLog(@"destination code in overview : %@",appDel.destinationStationCode);
     
     // construct api url with them    
-    urlString3 = [urlString3 stringByAppendingString:appDel.departureStationCode];
-    urlString3 = [urlString3 stringByAppendingString:@"&ToStationCode="];
-    urlString3 = [urlString3 stringByAppendingString:appDel.destinationStationCode];
-    urlString3 = [urlString3 stringByAppendingString:@"&api_key="];
+    pathUrlString = [pathUrlString stringByAppendingString:appDel.departureStationCode];
+    pathUrlString = [pathUrlString stringByAppendingString:@"&ToStationCode="];
+    pathUrlString = [pathUrlString stringByAppendingString:appDel.destinationStationCode];
+    pathUrlString = [pathUrlString stringByAppendingString:@"&api_key="];
     
     // for some reason, this request already has the key.
-//    urlString3 = [urlString3 stringByAppendingString:keyString3];
+//    pathUrlString = [pathUrlString stringByAppendingString:pathKeyString];
     
-    NSLog(@"key: %@",keyString3);
-    NSLog(@"total url: %@", urlString3);
+    NSLog(@"key: %@",pathKeyString);
+    NSLog(@"total url: %@", pathUrlString);
     
     // make request
     
@@ -61,8 +60,8 @@ NSString *keyString3 = @"bezj8khcsbj4jmsy6km4tjrm";
     [UIApplication sharedApplication].networkActivityIndicatorVisible=YES;
     
     // here pull API info for the station selected
-    urlString3 =[urlString3 stringByAppendingString:keyString3];
-    NSURL *apiURL = [NSURL URLWithString:urlString3];
+    pathUrlString =[pathUrlString stringByAppendingString:pathKeyString];
+    NSURL *apiURL = [NSURL URLWithString:pathUrlString];
     NSURLRequest *apiRequest = [NSURLRequest requestWithURL:apiURL];
     
     AFJSONRequestOperation *apiOperation = [AFJSONRequestOperation JSONRequestOperationWithRequest:apiRequest
