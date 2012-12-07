@@ -15,7 +15,6 @@
 		AF0DAE9A16389C130036254D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0DAE9916389C130036254D /* libsqlite3.dylib */; };
 		AF53459A165AFFCC0082AB1D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF534599165AFFCC0082AB1D /* HomeViewController.m */; };
 		AF53459D165B01DC0082AB1D /* SettingsModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */; };
-		AF610647166431A900588519 /* FavViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF610646166431A900588519 /* FavViewController.m */; };
 		AF6106491664425E00588519 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6106481664425E00588519 /* Default@2x.png */; };
 		AF61064B1664426100588519 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = AF61064A1664426100588519 /* Default.png */; };
 		AF96A9C116407C12004DD8A8 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9AF16407C12004DD8A8 /* AFHTTPClient.m */; };
@@ -40,6 +39,7 @@
 		AFCDAD9C1637163F00F76D41 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDAD9B1637163F00F76D41 /* main.m */; };
 		AFCDADA01637163F00F76D41 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCDAD9F1637163F00F76D41 /* AppDelegate.m */; };
 		AFCDADA71637164C00F76D41 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */; };
+		AFDCC46816719CE300447A7B /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDCC46716719CE300447A7B /* FavoritesTableViewController.m */; };
 		FB4DDECF166FEEC3008848A3 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC7166FEEC2008848A3 /* CloseButton.png */; };
 		FB4DDED0166FEEC3008848A3 /* DCEZLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */; };
 		FB4DDED1166FEEC3008848A3 /* fav-routes-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC9166FEEC2008848A3 /* fav-routes-btn.png */; };
@@ -66,8 +66,6 @@
 		AF534599165AFFCC0082AB1D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../HomeViewController.m; sourceTree = "<group>"; };
 		AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsModalViewController.h; path = ../SettingsModalViewController.h; sourceTree = "<group>"; };
 		AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsModalViewController.m; path = ../SettingsModalViewController.m; sourceTree = "<group>"; };
-		AF610645166431A900588519 /* FavViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavViewController.h; path = ../FavViewController.h; sourceTree = "<group>"; };
-		AF610646166431A900588519 /* FavViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavViewController.m; path = ../FavViewController.m; sourceTree = "<group>"; };
 		AF6106481664425E00588519 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		AF61064A1664426100588519 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		AF96A9AE16407C12004DD8A8 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
@@ -111,6 +109,8 @@
 		AFCDAD9E1637163F00F76D41 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AFCDAD9F1637163F00F76D41 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		AFDCC46616719CE300447A7B /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoritesTableViewController.h; path = ../FavoritesTableViewController.h; sourceTree = "<group>"; };
+		AFDCC46716719CE300447A7B /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoritesTableViewController.m; path = ../FavoritesTableViewController.m; sourceTree = "<group>"; };
 		FB4DDEC7166FEEC2008848A3 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
 		FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DCEZLogo.png; sourceTree = "<group>"; };
 		FB4DDEC9166FEEC2008848A3 /* fav-routes-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav-routes-btn.png"; sourceTree = "<group>"; };
@@ -165,6 +165,7 @@
 		AF67BA6C166FF11A0078FA78 /* Image assets */ = {
 			isa = PBXGroup;
 			children = (
+				AFC382DD1671972500CDC006 /* Default-568h@2x.png */,
 				FB4DDEC7166FEEC2008848A3 /* CloseButton.png */,
 				FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */,
 				FB4DDEC9166FEEC2008848A3 /* fav-routes-btn.png */,
@@ -206,7 +207,6 @@
 		AFCDAD801637163E00F76D41 = {
 			isa = PBXGroup;
 			children = (
-				AFC382DD1671972500CDC006 /* Default-568h@2x.png */,
 				AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */,
 				AF0DAE9916389C130036254D /* libsqlite3.dylib */,
 				AF67BA6C166FF11A0078FA78 /* Image assets */,
@@ -246,8 +246,8 @@
 				AFC382CF16717BD000CDC006 /* ChooseDepartureStationViewController.m */,
 				AFC382D116717BDB00CDC006 /* ChooseDestinationStationViewController.h */,
 				AFC382D216717BDB00CDC006 /* ChooseDestinationStationViewController.m */,
-				AF610645166431A900588519 /* FavViewController.h */,
-				AF610646166431A900588519 /* FavViewController.m */,
+				AFDCC46616719CE300447A7B /* FavoritesTableViewController.h */,
+				AFDCC46716719CE300447A7B /* FavoritesTableViewController.m */,
 				AFC382D716717F5500CDC006 /* FindStationTableViewController.h */,
 				AFC382D816717F5500CDC006 /* FindStationTableViewController.m */,
 				AF534598165AFFCC0082AB1D /* HomeViewController.h */,
@@ -366,12 +366,12 @@
 				AF96A9C916407C12004DD8A8 /* UIImageView+AFNetworking.m in Sources */,
 				AF53459A165AFFCC0082AB1D /* HomeViewController.m in Sources */,
 				AF53459D165B01DC0082AB1D /* SettingsModalViewController.m in Sources */,
-				AF610647166431A900588519 /* FavViewController.m in Sources */,
 				AFB74F42166D6D1600BA71EE /* MenuViewController.m in Sources */,
 				AFC382D016717BD000CDC006 /* ChooseDepartureStationViewController.m in Sources */,
 				AFC382D316717BDB00CDC006 /* ChooseDestinationStationViewController.m in Sources */,
 				AFC382D916717F5500CDC006 /* FindStationTableViewController.m in Sources */,
 				AFC382DC167187C500CDC006 /* OverviewTableViewController.m in Sources */,
+				AFDCC46816719CE300447A7B /* FavoritesTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

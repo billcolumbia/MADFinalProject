@@ -1,18 +1,18 @@
 //
-//  FindStationTableViewController.m
+//  FavoritesTableViewController.m
 //  DCEZ
 //
 //  Created by Juan Valera on 12/6/12.
 //
 //
 
-#import "FindStationTableViewController.h"
+#import "FavoritesTableViewController.h"
 
-@interface FindStationTableViewController ()
+@interface FavoritesTableViewController ()
 
 @end
 
-@implementation FindStationTableViewController
+@implementation FavoritesTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -25,8 +25,11 @@
 
 -(void)viewWillAppear:(BOOL)animated
 {
-    // forces VC to show navigation bar
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    // check if favs exist in a .plist
+    // if yes, import them
+    // if not, show blank favs screen
 }
 
 - (void)viewDidLoad
@@ -50,12 +53,14 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
     return 0;
 }
