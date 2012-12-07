@@ -36,7 +36,7 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-        
+    pathUrlString = @"http://api.wmata.com/Rail.svc/json/JPath?FromStationCode=";
     // test delegate vars     
     appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];    
     NSLog(@"departure code in overview : %@",appDel.departureStationCode);
