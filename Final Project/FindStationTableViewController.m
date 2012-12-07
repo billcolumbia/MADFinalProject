@@ -107,6 +107,12 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
     return [redLineStationsDictionary[@"Stations"] count];
 }
 
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    // Return the number of sections.
+    return 1;
+}
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
@@ -117,20 +123,15 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
     }
     
-    // get JSON from variable
-    NSDictionary *stations = redLineStationsDictionary[@"Stations"];
-//    NSLog(@"stations: %@",stations);
-    NSInteger *jsonCount = [redLineStationsDictionary[@"Stations"] count];
-    NSInteger *i;
-    
-    
-    for (i=0; i<jsonCount; i++)
-    {
-        NSLog(@"hi, i: %i",i);
-    }
+    NSString *stations = redLineStationsDictionary[@"Stations"];
+    NSLog(@"stations: %@",stations);
+
+//    NSLog(@"TableView Section: %d, Row: %d", indexPath.section, indexPath.row);
     
     // Configure the cell...
-    cell.textLabel.text= @"hey there slick";
+    
+    // cell text label set to station names
+    cell.textLabel.text= redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
     
     return cell;
 }
