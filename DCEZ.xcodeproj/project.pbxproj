@@ -21,6 +21,7 @@
 		AF9647321672A57D00F47062 /* MidCellBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF96472E1672A57D00F47062 /* MidCellBackground@2x.png */; };
 		AF9647331672A57D00F47062 /* StartCellBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF96472F1672A57D00F47062 /* StartCellBackground@2x.png */; };
 		AF9647341672A57D00F47062 /* StartStation.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF9647301672A57D00F47062 /* StartStation.xib */; };
+		AF9647381672A65B00F47062 /* OverviewCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9647371672A65B00F47062 /* OverviewCustomCell.m */; };
 		AF96A9C116407C12004DD8A8 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9AF16407C12004DD8A8 /* AFHTTPClient.m */; };
 		AF96A9C216407C12004DD8A8 /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9B116407C12004DD8A8 /* AFHTTPRequestOperation.m */; };
 		AF96A9C316407C12004DD8A8 /* AFImageRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = AF96A9B316407C12004DD8A8 /* AFImageRequestOperation.m */; };
@@ -76,6 +77,8 @@
 		AF96472E1672A57D00F47062 /* MidCellBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MidCellBackground@2x.png"; sourceTree = "<group>"; };
 		AF96472F1672A57D00F47062 /* StartCellBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StartCellBackground@2x.png"; sourceTree = "<group>"; };
 		AF9647301672A57D00F47062 /* StartStation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StartStation.xib; sourceTree = "<group>"; };
+		AF9647361672A65B00F47062 /* OverviewCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OverviewCustomCell.h; path = ../OverviewCustomCell.h; sourceTree = "<group>"; };
+		AF9647371672A65B00F47062 /* OverviewCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OverviewCustomCell.m; path = ../OverviewCustomCell.m; sourceTree = "<group>"; };
 		AF96A9AE16407C12004DD8A8 /* AFHTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPClient.h; sourceTree = "<group>"; };
 		AF96A9AF16407C12004DD8A8 /* AFHTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPClient.m; sourceTree = "<group>"; };
 		AF96A9B016407C12004DD8A8 /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
@@ -258,6 +261,8 @@
 				AF534599165AFFCC0082AB1D /* HomeViewController.m */,
 				AFB74F40166D6D1600BA71EE /* MenuViewController.h */,
 				AFB74F41166D6D1600BA71EE /* MenuViewController.m */,
+				AF9647361672A65B00F47062 /* OverviewCustomCell.h */,
+				AF9647371672A65B00F47062 /* OverviewCustomCell.m */,
 				AFC382DA167187C500CDC006 /* OverviewTableViewController.h */,
 				AFC382DB167187C500CDC006 /* OverviewTableViewController.m */,
 				AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */,
@@ -380,6 +385,7 @@
 				AFC382DC167187C500CDC006 /* OverviewTableViewController.m in Sources */,
 				AFDCC46816719CE300447A7B /* FavoritesTableViewController.m in Sources */,
 				AFCED321167273B800A24240 /* FindStationViewController.m in Sources */,
+				AF9647381672A65B00F47062 /* OverviewCustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

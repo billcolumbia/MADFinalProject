@@ -9,6 +9,7 @@
 #import "OverviewTableViewController.h"
 #import "AppDelegate.h"
 #import "AFNetworking.h"
+#import "OverviewCustomCell.h"
 
 @interface OverviewTableViewController ()
 
@@ -22,12 +23,21 @@
 NSString *pathUrlString = @"http://api.wmata.com/Rail.svc/json/JPath?FromStationCode=";
 NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self)
+//- (id)initWithStyle:(UITableViewStyle)style
+//{
+//    self = [super initWithStyle:style];
+//    if (self)
+//    {
+//        // Custom initialization
+//    }
+//    return self;
+//}
+
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nil bundle:nil];
+    if(self)
     {
-        // Custom initialization
+        self.view.backgroundColor = [UIColor colorWithRed:34 green:37 blue:37 alpha:1];
     }
     return self;
 }
@@ -84,14 +94,16 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-      
+    UINib *myCustomNib = [UINib nibWithNibName:@"StartStation" bundle:nil];
+    [[self tableView] registerNib:myCustomNib forCellReuseIdentifier:@"startCell"];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;}
 }
-
 - (void)viewDidUnload
 {
     [super viewDidUnload];
@@ -120,18 +132,30 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }
+    OverviewCustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"startCell"];
+    cell.stationName.text = overviewStationsDictionary[@"Path"][indexPath.row][@"StationName"];
         
-    // Configure the cell...    
-    // cell text label set to station names
-    cell.textLabel.text= overviewStationsDictionary[@"Path"][indexPath.row][@"StationName"];
+    NSInteger *countToManipulate = [overviewStationsDictionary[@"Path"] count] - 1;
+
+    if (indexPath.row == 0){
+        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"StartCellBackground.png"]];
+        NSLog(@"This should be start %d", indexPath.row);
+    }
+    else if (indexPath.row == countToManipulate){
+        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"EndCellBackground.png"]];
+        NSLog(@"This should be end %d", indexPath.row);
+        NSLog(@"The count is %d", [overviewStationsDictionary[@"Path"] count]);
+    }
+    else if (indexPath.row < [overviewStationsDictionary[@"Path"] count] && indexPath.row > 0) {
+        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"MidCellBackground.png"]];
+        NSLog(@"This should be mid %d", indexPath.row);
+    }
+    else{
+        NSLog(@"You really messed this up duder!");
+    }
     
+//    NSLog(@"This IS row %d", indexPath.row);
+//    NSLog(@"The total count is %d", [overviewStationsDictionary[@"Path"] count]);
     return cell;
 }
 
@@ -140,9 +164,9 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
 
 }
 
--(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    return 100;
 }
 
 @end
