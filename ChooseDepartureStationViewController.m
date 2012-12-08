@@ -90,6 +90,7 @@
     // Configure the cell...    
     // cell text label set to station names
     cell.textLabel.text= redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     return cell;
 }

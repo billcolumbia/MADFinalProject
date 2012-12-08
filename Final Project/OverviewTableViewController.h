@@ -16,4 +16,6 @@
 @property (nonatomic, strong) NSString *destinationStationCodeForRequest;
 @property (nonatomic, strong) AppDelegate *appDel;
 
+-(IBAction) addToFavorites:(id)sender;
+
 @end
