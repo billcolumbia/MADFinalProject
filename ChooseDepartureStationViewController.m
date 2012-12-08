@@ -8,6 +8,7 @@
 
 #import "ChooseDepartureStationViewController.h"
 #import "AppDelegate.h"
+#import "StandardCustomCell.h"
 
 @interface ChooseDepartureStationViewController ()
 
@@ -17,12 +18,11 @@
 
 @synthesize redLineStationsDictionary, appDel;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self)
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nil bundle:nil];
+    if(self)
     {
-        // Custom initialization
+        self.view.backgroundColor = [UIColor colorWithRed:34 green:37 blue:37 alpha:1];
     }
     return self;
 }
@@ -43,6 +43,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UINib *standardCellNib = [UINib nibWithNibName:@"StandardCustomCell" bundle:nil];
+    [[self tableView] registerNib:standardCellNib forCellReuseIdentifier:@"standardCell"];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
+
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -79,20 +83,42 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    //static NSString *CellIdentifier = @"standardCell";
     
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
-    }    
+    //StandardCustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"standardCell"];
+    //cell.mainTextLabel.text = redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
+    //cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"StartCellBackground.png"]];
     
+//    if (cell == nil)
+//    {
+//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"standardCell"];
+//    }
     // Configure the cell...    
     // cell text label set to station names
-    cell.textLabel.text= redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
+    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    //cell.contentView.backgroundColor = [UIColor colorWithRed:34 green:37 blue:37 alpha:1];
+    //return cell;
+    NSString *typeOfStation = redLineStationsDictionary[@"Stations"][indexPath.row][@"StationTogether1"];
+
+    StandardCustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"standardCell"];
+    cell.mainTextLabel.text = redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
+    if (![typeOfStation isEqualToString:@""]){
+        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"TransferStationBackground.png"]];
+    }
+    else {
+        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"StandardStationBackground.png"]];
+    }
+    //cell.contentView.backgroundColor = [UIColor colorWithRed:.3 green:.2 blue:.2 alpha:1];
+    NSLog(@"The station name is %@", redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"]);
+    NSLog(@"Station Together is %@", typeOfStation);
+    NSLog(@"Station Together is %@", redLineStationsDictionary[@"Stations"][indexPath.row][@"StationTogether1"]);
     return cell;
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
 }
 
 #pragma mark - Table view delegate
