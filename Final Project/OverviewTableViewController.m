@@ -44,15 +44,18 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    // show nav bar
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    // reset url in case this isn't the first time this view is being loaded.
     pathUrlString = @"http://api.wmata.com/Rail.svc/json/JPath?FromStationCode=";
     
     // test delegate vars     
     appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     departureStationCodeForRequest = appDel.departureStationCode;
     destinationStationCodeForRequest = appDel.destinationStationCode;
-    NSLog(@"departure code in overview : %@",departureStationCodeForRequest);
-    NSLog(@"destination code in overview : %@",destinationStationCodeForRequest);
+//    NSLog(@"departure code in overview : %@",departureStationCodeForRequest);
+//    NSLog(@"destination code in overview : %@",destinationStationCodeForRequest);
     
     // construct api url with them    
     pathUrlString = [pathUrlString stringByAppendingString:departureStationCodeForRequest];
@@ -189,8 +192,49 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
     }
     else if (buttonIndex == 1)
     {
-        // save entered text as title along with two station codes.
         NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
+        
+        
+        // save entered text as title along with two station codes.
+        
+        // add title and codes into array
+        NSString *newFavoriteTitle = [[alertView textFieldAtIndex:0] text];
+        NSArray *newFavoriteArray = [[NSArray alloc] initWithObjects:newFavoriteTitle,departureStationCodeForRequest, destinationStationCodeForRequest, nil];
+        
+        // make path to document directory
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *pathToPlist = [documentsDirectory stringByAppendingString:@"Favorites.plist"];
+        
+        // check if Favorites.plist exists.
+        BOOL favoritesPlistExists = NO;
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        favoritesPlistExists = [fileManager fileExistsAtPath:pathToPlist];
+        
+        if(favoritesPlistExists == NO)
+        {
+            // plist does not exist, make new.
+            NSLog(@"Favorites.plist does not exist.");
+        }
+        else if(favoritesPlistExists == YES)
+        {
+            // plist does exist, pull out into nsmutable array
+            // write the whole mutable array into the plist
+            NSLog(@"Favorites.plist exists.");            
+        }
+        else
+        {
+            NSLog(@"World End. Favrites.plist neither exists nor does not exist.");
+        }
+        
+        // if so, pull its contents into an NSMutable Array
+            // add the new items to the mutable array
+            // write the whole mutable array into the plist
+        
+        // if not, create it and save the new array into it.
+        
+       
+        // 
     }
 }
 
