@@ -45,6 +45,8 @@
 		AFCDADA71637164C00F76D41 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */; };
 		AFCED321167273B800A24240 /* FindStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCED320167273B800A24240 /* FindStationViewController.m */; };
 		AFDCC46816719CE300447A7B /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDCC46716719CE300447A7B /* FavoritesTableViewController.m */; };
+		FB2EBFB31672DE39008E870F /* TransferStationBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB2EBFB21672DE39008E870F /* TransferStationBackground@2x.png */; };
+		FB2EBFB51672E424008E870F /* StandardStationBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB2EBFB41672E424008E870F /* StandardStationBackground@2x.png */; };
 		FB4DDECF166FEEC3008848A3 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC7166FEEC2008848A3 /* CloseButton.png */; };
 		FB4DDED0166FEEC3008848A3 /* DCEZLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */; };
 		FB4DDED1166FEEC3008848A3 /* fav-routes-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC9166FEEC2008848A3 /* fav-routes-btn.png */; };
@@ -53,6 +55,8 @@
 		FB4DDED4166FEEC3008848A3 /* MenuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDECC166FEEC2008848A3 /* MenuButton.png */; };
 		FB4DDED5166FEEC3008848A3 /* plan-a-route-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDECD166FEEC2008848A3 /* plan-a-route-btn.png */; };
 		FB4DDED6166FEEC3008848A3 /* SettingsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDECE166FEEC3008848A3 /* SettingsButton.png */; };
+		FB7544D81672BE2700B8A5E2 /* StandardCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7544D71672BE2700B8A5E2 /* StandardCustomCell.xib */; };
+		FB7544DC1672BE5700B8A5E2 /* StandardCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7544DB1672BE5700B8A5E2 /* StandardCustomCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +126,8 @@
 		AFCED320167273B800A24240 /* FindStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindStationViewController.m; path = ../FindStationViewController.m; sourceTree = "<group>"; };
 		AFDCC46616719CE300447A7B /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoritesTableViewController.h; path = ../FavoritesTableViewController.h; sourceTree = "<group>"; };
 		AFDCC46716719CE300447A7B /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoritesTableViewController.m; path = ../FavoritesTableViewController.m; sourceTree = "<group>"; };
+		FB2EBFB21672DE39008E870F /* TransferStationBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TransferStationBackground@2x.png"; sourceTree = "<group>"; };
+		FB2EBFB41672E424008E870F /* StandardStationBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StandardStationBackground@2x.png"; sourceTree = "<group>"; };
 		FB4DDEC7166FEEC2008848A3 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
 		FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DCEZLogo.png; sourceTree = "<group>"; };
 		FB4DDEC9166FEEC2008848A3 /* fav-routes-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav-routes-btn.png"; sourceTree = "<group>"; };
@@ -130,6 +136,9 @@
 		FB4DDECC166FEEC2008848A3 /* MenuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MenuButton.png; sourceTree = "<group>"; };
 		FB4DDECD166FEEC2008848A3 /* plan-a-route-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "plan-a-route-btn.png"; sourceTree = "<group>"; };
 		FB4DDECE166FEEC3008848A3 /* SettingsButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsButton.png; sourceTree = "<group>"; };
+		FB7544D71672BE2700B8A5E2 /* StandardCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StandardCustomCell.xib; sourceTree = "<group>"; };
+		FB7544DA1672BE5700B8A5E2 /* StandardCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardCustomCell.h; sourceTree = "<group>"; };
+		FB7544DB1672BE5700B8A5E2 /* StandardCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardCustomCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,6 +181,8 @@
 				AF96472F1672A57D00F47062 /* StartCellBackground@2x.png */,
 				AF61064A1664426100588519 /* Default.png */,
 				AF6106481664425E00588519 /* Default@2x.png */,
+				FB2EBFB41672E424008E870F /* StandardStationBackground@2x.png */,
+				FB2EBFB21672DE39008E870F /* TransferStationBackground@2x.png */,
 				AFC382DD1671972500CDC006 /* Default-568h@2x.png */,
 				FB4DDEC7166FEEC2008848A3 /* CloseButton.png */,
 				FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */,
@@ -249,6 +260,9 @@
 			children = (
 				AFCDAD9E1637163F00F76D41 /* AppDelegate.h */,
 				AFCDAD9F1637163F00F76D41 /* AppDelegate.m */,
+				FB7544D71672BE2700B8A5E2 /* StandardCustomCell.xib */,
+				FB7544DA1672BE5700B8A5E2 /* StandardCustomCell.h */,
+				FB7544DB1672BE5700B8A5E2 /* StandardCustomCell.m */,
 				AFC382CE16717BD000CDC006 /* ChooseDepartureStationViewController.h */,
 				AFC382CF16717BD000CDC006 /* ChooseDepartureStationViewController.m */,
 				AFC382D116717BDB00CDC006 /* ChooseDestinationStationViewController.h */,
@@ -351,6 +365,9 @@
 				AF9647321672A57D00F47062 /* MidCellBackground@2x.png in Resources */,
 				AF9647331672A57D00F47062 /* StartCellBackground@2x.png in Resources */,
 				AF9647341672A57D00F47062 /* StartStation.xib in Resources */,
+				FB7544D81672BE2700B8A5E2 /* StandardCustomCell.xib in Resources */,
+				FB2EBFB31672DE39008E870F /* TransferStationBackground@2x.png in Resources */,
+				FB2EBFB51672E424008E870F /* StandardStationBackground@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,6 +403,7 @@
 				AFDCC46816719CE300447A7B /* FavoritesTableViewController.m in Sources */,
 				AFCED321167273B800A24240 /* FindStationViewController.m in Sources */,
 				AF9647381672A65B00F47062 /* OverviewCustomCell.m in Sources */,
+				FB7544DC1672BE5700B8A5E2 /* StandardCustomCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
