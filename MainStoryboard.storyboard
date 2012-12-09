@@ -519,11 +519,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.062745101749897003" green="0.062745101749897003" blue="0.070588238537311554" alpha="1" colorSpace="deviceRGB"/>
                         <button key="tableFooterView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Bhy-lf-3KF">
-                            <rect key="frame" x="0.0" y="66" width="320" height="44"/>
+                            <rect key="frame" x="0.0" y="66" width="320" height="53"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" red="0.1019607931" green="0.10588236149999999" blue="0.1098039299" alpha="1" colorSpace="deviceRGB"/>
                             <fontDescription key="fontDescription" name="AvenirNextCondensed-Medium" family="Avenir Next Condensed" pointSize="20"/>
-                            <state key="normal" title="Add To Favorites">
+                            <state key="normal" title="Add To Favorites" backgroundImage="ListButton.png">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
@@ -573,6 +573,7 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" red="0.10196079313755035" green="0.10588236153125763" blue="0.1098039299249649" alpha="1" colorSpace="deviceRGB"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>

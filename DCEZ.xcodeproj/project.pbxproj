@@ -220,6 +220,7 @@
 				AFC382DD1671972500CDC006 /* Default-568h@2x.png */,
 				FB1139EB1673E39E007F43C7 /* Metrobackground@2x.png */,
 				FB4DDEC7166FEEC2008848A3 /* CloseButton.png */,
+				FBDCC1681675047D00B40407 /* DCEZAppIcon.png */,
 				FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */,
 				FB1139F31673F0AC007F43C7 /* FindAStationButton.png */,
 				FB1139F41673F0AC007F43C7 /* FindAStationButton@2x.png */,
@@ -272,7 +273,6 @@
 		AFCDAD801637163E00F76D41 = {
 			isa = PBXGroup;
 			children = (
-				FBDCC1681675047D00B40407 /* DCEZAppIcon.png */,
 				AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */,
 				AF9647301672A57D00F47062 /* StartStation.xib */,
 				AF0DAE9916389C130036254D /* libsqlite3.dylib */,
