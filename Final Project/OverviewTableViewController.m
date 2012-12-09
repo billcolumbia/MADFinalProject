@@ -33,17 +33,21 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
 //    return self;
 //}
 
--(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-    self = [super initWithNibName:nil bundle:nil];
-    if(self)
-    {
-        self.view.backgroundColor = [UIColor colorWithRed:34 green:37 blue:37 alpha:1];
-    }
-    return self;
-}
+//-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+//    self = [super initWithNibName:nil bundle:nil];
+//    if(self)
+//    {
+//        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"MidCellBackground.png"]];
+//                                     //colorWithRed:34 green:37 blue:37 alpha:1];
+//    }
+//    return self;
+//}
 
 -(void)viewWillAppear:(BOOL)animated
 {
+    UIColor *background = [UIColor clearColor];
+    self.tableView.backgroundColor = background;
+    
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     pathUrlString = @"http://api.wmata.com/Rail.svc/json/JPath?FromStationCode=";
     

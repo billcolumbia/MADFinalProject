@@ -101,19 +101,22 @@
     //cell.contentView.backgroundColor = [UIColor colorWithRed:34 green:37 blue:37 alpha:1];
     //return cell;
     NSString *typeOfStation = redLineStationsDictionary[@"Stations"][indexPath.row][@"StationTogether1"];
+    NSString *stationName = redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
 
     StandardCustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"standardCell"];
     cell.mainTextLabel.text = redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
-    if (![typeOfStation isEqualToString:@""]){
-        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"TransferStationBackground.png"]];
+    if ([stationName isEqualToString:@"Fort Totten"] || [stationName isEqualToString:@"Gallery Place"]){ //F01 E06 Green/Yellow/Red
+        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"RedYellowGreenStationBackground.png"]];
+    }
+    else if ([stationName isEqualToString:@"Metro Center"]){ //This the only red/oragne/blue
+        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"BlueOrangeRedStationBackground.png"]];
     }
     else {
-        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"StandardStationBackground.png"]];
+        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"RedLineStationBackground.png"]];
     }
     //cell.contentView.backgroundColor = [UIColor colorWithRed:.3 green:.2 blue:.2 alpha:1];
-    NSLog(@"The station name is %@", redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"]);
+    NSLog(@"The station name is %@", stationName);
     NSLog(@"Station Together is %@", typeOfStation);
-    NSLog(@"Station Together is %@", redLineStationsDictionary[@"Stations"][indexPath.row][@"StationTogether1"]);
     return cell;
 }
 

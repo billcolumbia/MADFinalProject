@@ -46,7 +46,6 @@
 								<string key="NSFrame">{{20, 9}, {280, 52}}</string>
 								<reference key="NSSuperview" ref="26161258"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -62,16 +61,21 @@
 									<int key="NSColorSpace">3</int>
 									<bytes key="NSWhite">MQA</bytes>
 								</object>
+								<object class="NSColor" key="IBUIShadowColor">
+									<int key="NSColorSpace">1</int>
+									<bytes key="NSRGB">MC4xNjkxNjI1OTkzIDAuMTczMTIwOTUyMiAwLjIyMjYxMzc5MDgAA</bytes>
+								</object>
+								<string key="IBUIShadowOffset">{0, 1}</string>
 								<int key="IBUIBaselineAdjustment">0</int>
 								<object class="IBUIFontDescription" key="IBUIFontDescription">
 									<string key="name">AvenirNextCondensed-Regular</string>
 									<string key="family">Avenir Next Condensed</string>
 									<int key="traits">0</int>
-									<double key="pointSize">31</double>
+									<double key="pointSize">30</double>
 								</object>
 								<object class="NSFont" key="IBUIFont">
 									<string key="NSName">AvenirNextCondensed-Medium</string>
-									<double key="NSSize">31</double>
+									<double key="NSSize">30</double>
 									<int key="NSfFlags">16</int>
 								</object>
 								<bool key="IBUIAdjustsFontSizeToFit">NO</bool>
@@ -99,8 +103,8 @@
 				<reference key="NSNextKeyView" ref="26161258"/>
 				<string key="NSReuseIdentifierKey">_NS:9</string>
 				<object class="NSColor" key="IBUIBackgroundColor">
-					<int key="NSColorSpace">2</int>
-					<bytes key="NSRGB">MC4xMzMzMzMzNDAzIDAuMTQxMTc2NDc3MSAwLjE0NTA5ODA0NTUAA</bytes>
+					<int key="NSColorSpace">1</int>
+					<bytes key="NSRGB">MC4xNTY3NTk1MTA5IDAuMTQyMjc2MDg2NSAwLjA4NTExOTIyMzQ2AA</bytes>
 				</object>
 				<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
 				<int key="IBUISelectionStyle">0</int>
