@@ -14,6 +14,8 @@
 
 @implementation FavoritesTableViewController
 
+@synthesize favoritesArray;
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -28,12 +30,12 @@
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
-    // check if Favorites.plist exists.
     // make path to document directory
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
     NSString *documentsDirectory = [paths objectAtIndex:0];
     NSString *pathToPlist = [documentsDirectory stringByAppendingString:@"Favorites.plist"];
     
+    // check if Favorites.plist exists.    
     BOOL favoritesPlistExists = NO;
     NSFileManager *fileManager = [NSFileManager defaultManager];
     favoritesPlistExists = [fileManager fileExistsAtPath:pathToPlist];
@@ -48,6 +50,8 @@
     {
         // plist does exist, show in tableview
         NSLog(@"Favorites.plist exists in favoritesVC.");
+        favoritesArray = [[NSArray alloc] initWithContentsOfFile:pathToPlist];
+        NSLog(@"favoritesArray: %@", favoritesArray);
     }
     else
     {
@@ -78,21 +82,27 @@
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 0;
+    return favoritesArray.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
-    // Configure the cell...
+    if (cell == nil)
+    {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    }
+    
+    // 0-title, 1-departure station code, 2- destination station code
+    cell.textLabel.text = [[favoritesArray objectAtIndex:indexPath.row] objectAtIndex:0];
     
     return cell;
 }
