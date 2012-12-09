@@ -30,14 +30,10 @@
 -(void)viewWillAppear:(BOOL)animated
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
-    
-    // show spinning indicator on status bar to indicate stuff is happening.
-    [UIApplication sharedApplication].networkActivityIndicatorVisible=YES;
 
     // get local copy of redLineStationsDictionary from appDelegate.
     appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     redLineStationsDictionary = appDel.redLineStationsDictionary;
-//    NSLog(@"redLineStationDictionary in ChooseDeparture is: %@",redLineStationsDictionary);
 }
 
 - (void)viewDidLoad
@@ -46,7 +42,6 @@
     UINib *standardCellNib = [UINib nibWithNibName:@"StandardCustomCell" bundle:nil];
     [[self tableView] registerNib:standardCellNib forCellReuseIdentifier:@"standardCell"];
     [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
-
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -83,23 +78,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    //static NSString *CellIdentifier = @"standardCell";
-    
-    //StandardCustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"standardCell"];
-    //cell.mainTextLabel.text = redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
-    //cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"StartCellBackground.png"]];
-    
-//    if (cell == nil)
-//    {
-//        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"standardCell"];
-//    }
-    // Configure the cell...    
-    // cell text label set to station names
-    //cell.textLabel.text= redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
-    
-    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    //cell.contentView.backgroundColor = [UIColor colorWithRed:34 green:37 blue:37 alpha:1];
-    //return cell;
     NSString *typeOfStation = redLineStationsDictionary[@"Stations"][indexPath.row][@"StationTogether1"];
     NSString *stationName = redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
 
@@ -117,6 +95,7 @@
     //cell.contentView.backgroundColor = [UIColor colorWithRed:.3 green:.2 blue:.2 alpha:1];
     NSLog(@"The station name is %@", stationName);
     NSLog(@"Station Together is %@", typeOfStation);
+
     return cell;
 }
 

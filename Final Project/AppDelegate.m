@@ -32,7 +32,7 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
     {
          // Download done, stop spinning indicator.
         [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
-        NSLog(@"API JSON request %@ success in AppDel!",request);
+        NSLog(@"API JSON request in AppDelegate success!");
         
         //capture JSON, store here and in appDel var.
         appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];

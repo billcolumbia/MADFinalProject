@@ -48,18 +48,23 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
     UIColor *background = [UIColor clearColor];
     self.tableView.backgroundColor = background;
     
+    // show nav bar
     [self.navigationController setNavigationBarHidden:NO animated:YES];
+    
+    // reset url in case this isn't the first time this view is being loaded.
     pathUrlString = @"http://api.wmata.com/Rail.svc/json/JPath?FromStationCode=";
     
     // test delegate vars     
-    appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];    
-    NSLog(@"departure code in overview : %@",appDel.departureStationCode);
-    NSLog(@"destination code in overview : %@",appDel.destinationStationCode);
+    appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+    departureStationCodeForRequest = appDel.departureStationCode;
+    destinationStationCodeForRequest = appDel.destinationStationCode;
+//    NSLog(@"departure code in overview : %@",departureStationCodeForRequest);
+//    NSLog(@"destination code in overview : %@",destinationStationCodeForRequest);
     
     // construct api url with them    
-    pathUrlString = [pathUrlString stringByAppendingString:appDel.departureStationCode];
+    pathUrlString = [pathUrlString stringByAppendingString:departureStationCodeForRequest];
     pathUrlString = [pathUrlString stringByAppendingString:@"&ToStationCode="];
-    pathUrlString = [pathUrlString stringByAppendingString:appDel.destinationStationCode];
+    pathUrlString = [pathUrlString stringByAppendingString:destinationStationCodeForRequest];
     pathUrlString = [pathUrlString stringByAppendingString:@"&api_key="];
     pathUrlString =[pathUrlString stringByAppendingString:pathKeyString];
     
@@ -142,24 +147,21 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
     NSInteger *countToManipulate = [overviewStationsDictionary[@"Path"] count] - 1;
 
     if (indexPath.row == 0){
+        // if is first station in list...
         cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"StartCellBackground.png"]];
-        NSLog(@"This should be start %d", indexPath.row);
     }
     else if (indexPath.row == countToManipulate){
+        // if is last station in list...        
         cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"EndCellBackground.png"]];
-        NSLog(@"This should be end %d", indexPath.row);
-        NSLog(@"The count is %d", [overviewStationsDictionary[@"Path"] count]);
     }
     else if (indexPath.row < [overviewStationsDictionary[@"Path"] count] && indexPath.row > 0) {
+        // if is a station in list not first or last...
         cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"MidCellBackground.png"]];
-        NSLog(@"This should be mid %d", indexPath.row);
     }
     else{
         NSLog(@"You really messed this up duder!");
     }
     
-//    NSLog(@"This IS row %d", indexPath.row);
-//    NSLog(@"The total count is %d", [overviewStationsDictionary[@"Path"] count]);
     return cell;
 }
 
@@ -171,6 +173,72 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 100;
+}
+
+-(void)addToFavorites:(id)sender
+{
+    NSLog(@"Departure: %@, Destination: %@",departureStationCodeForRequest,destinationStationCodeForRequest);
+    
+    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Route Name" message:@"What would you like to name this favorite route?" delegate:self cancelButtonTitle:@"Cancel" otherButtonTitles:@"Save", nil];
+    alert.alertViewStyle = UIAlertViewStylePlainTextInput;
+    
+    UITextField * alertTextField = [alert textFieldAtIndex:0];
+    alertTextField.placeholder = @"School to home";
+    
+    [alert show];
+}
+
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if (buttonIndex == 0)
+    {
+        // do nothing, they clicked 'Cancel'
+    }
+    else if (buttonIndex == 1)
+    {
+        NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
+        
+        // save entered text as title along with two station codes in favorites.plist.
+        
+        // add title and codes into array
+        NSString *newFavoriteTitle = [[alertView textFieldAtIndex:0] text];
+        NSArray *newFavoriteArray = [[NSArray alloc] initWithObjects:newFavoriteTitle,departureStationCodeForRequest, destinationStationCodeForRequest, nil];
+        
+        // make path to document directory
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *pathToPlist = [documentsDirectory stringByAppendingString:@"Favorites.plist"];
+        
+        // check if Favorites.plist exists.
+        BOOL favoritesPlistExists = NO;
+        NSFileManager *fileManager = [NSFileManager defaultManager];
+        favoritesPlistExists = [fileManager fileExistsAtPath:pathToPlist];
+        
+        if(favoritesPlistExists == NO)
+        {
+            NSLog(@"Favorites.plist does not exist. Creating new Favorites.plist");
+            NSMutableArray *mutableFavoritesArray = [[NSMutableArray alloc] init];
+            // add new fav to the mutable array
+            [mutableFavoritesArray addObject:newFavoriteArray];
+            // write the whole mutable array into the plist
+            [mutableFavoritesArray writeToFile:pathToPlist atomically:YES];
+        }
+        else if(favoritesPlistExists == YES)
+        {
+            NSLog(@"Favorites.plist exists. Inserting new favs into plist.");                        
+            // plist does exist, pull out into nsmutable array
+            NSMutableArray *mutableFavoritesArray = [[NSMutableArray alloc] initWithContentsOfFile:pathToPlist];
+            // add new fav to the mutable array
+            [mutableFavoritesArray addObject:newFavoriteArray];
+            // write the whole mutable array into the plist
+            [mutableFavoritesArray writeToFile:pathToPlist atomically:YES];
+        }
+        else
+        {
+            NSLog(@"World End. Favorites.plist neither exists nor does not exist. Somehow.");
+        }
+        
+    }
 }
 
 @end
