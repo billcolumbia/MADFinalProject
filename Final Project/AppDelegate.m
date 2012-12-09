@@ -49,6 +49,11 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
     }];
     
     [apiOperation start];
+    UIView *bgView = [[UIView alloc]initWithFrame:_window.frame];
+    
+    bgView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"MetroBackground.png"]];
+    [_window addSubview:bgView];
+    bgView.contentMode = UIViewContentModeScaleToFill;
 
     return YES;
 }

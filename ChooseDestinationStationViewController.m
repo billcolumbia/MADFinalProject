@@ -8,6 +8,7 @@
 
 #import "ChooseDestinationStationViewController.h"
 #import "AppDelegate.h"
+#import "StandardCustomCell.h"
 
 @interface ChooseDestinationStationViewController ()
 
@@ -18,15 +19,15 @@
 
 @synthesize redLineStationsDictionary, appDel;
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self)
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nil bundle:nil];
+    if(self)
     {
-        // Custom initialization
+        self.view.backgroundColor = [UIColor colorWithRed:34 green:37 blue:37 alpha:1];
     }
     return self;
 }
+
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -40,6 +41,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    UINib *standardCellNib = [UINib nibWithNibName:@"StandardCustomCell" bundle:nil];
+    [[self tableView] registerNib:standardCellNib forCellReuseIdentifier:@"standardCell"];
+    [self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
       
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -76,24 +80,32 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    NSString *typeOfStation = redLineStationsDictionary[@"Stations"][indexPath.row][@"StationTogether1"];
+    NSString *stationName = redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
     
-    if (cell == nil)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"Cell"];
+    StandardCustomCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"standardCell"];
+    cell.mainTextLabel.text = redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
+    if ([stationName isEqualToString:@"Fort Totten"] || [stationName isEqualToString:@"Gallery Place"]){ //F01 E06 Green/Yellow/Red
+        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"RedYellowGreenStationBackground.png"]];
     }
-    
-    // NSLog(@"TableView Section: %d, Row: %d", indexPath.section, indexPath.row);
-    
-    // Configure the cell...    
-    // cell text label set to station names
-    cell.textLabel.text= redLineStationsDictionary[@"Stations"][indexPath.row][@"Name"];
-    
+    else if ([stationName isEqualToString:@"Metro Center"]){ //This the only red/oragne/blue
+        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"BlueOrangeRedStationBackground.png"]];
+    }
+    else {
+        cell.contentView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"RedLineStationBackground.png"]];
+    }
+    //cell.contentView.backgroundColor = [UIColor colorWithRed:.3 green:.2 blue:.2 alpha:1];
+    NSLog(@"The station name is %@", stationName);
+    NSLog(@"Station Together is %@", typeOfStation);
     return cell;
 }
 
 #pragma mark - Table view delegate
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
+}
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

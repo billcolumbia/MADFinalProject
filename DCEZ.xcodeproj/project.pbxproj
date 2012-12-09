@@ -45,8 +45,23 @@
 		AFCDADA71637164C00F76D41 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */; };
 		AFCED321167273B800A24240 /* FindStationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFCED320167273B800A24240 /* FindStationViewController.m */; };
 		AFDCC46816719CE300447A7B /* FavoritesTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFDCC46716719CE300447A7B /* FavoritesTableViewController.m */; };
-		FB2EBFB31672DE39008E870F /* TransferStationBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB2EBFB21672DE39008E870F /* TransferStationBackground@2x.png */; };
-		FB2EBFB51672E424008E870F /* StandardStationBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB2EBFB41672E424008E870F /* StandardStationBackground@2x.png */; };
+		FB0AB7501673BF020021FD2E /* RedLineStationBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0AB74D1673BF020021FD2E /* RedLineStationBackground@2x.png */; };
+		FB0AB7531673D40E0021FD2E /* BlueOrangeRedStationBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0AB7511673D40E0021FD2E /* BlueOrangeRedStationBackground@2x.png */; };
+		FB0AB7541673D40E0021FD2E /* RedYellowGreenStationBackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB0AB7521673D40E0021FD2E /* RedYellowGreenStationBackground@2x.png */; };
+		FB0AB7561673D7650021FD2E /* ShadyGrove.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = FB0AB7551673D7650021FD2E /* ShadyGrove.jpeg */; };
+		FB1139EC1673E39E007F43C7 /* Metrobackground@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1139EB1673E39E007F43C7 /* Metrobackground@2x.png */; };
+		FB1139F01673EE6E007F43C7 /* PlanARouteButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1139EF1673EE6E007F43C7 /* PlanARouteButton.png */; };
+		FB1139F21673EFAC007F43C7 /* PlanARouteButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1139F11673EFAC007F43C7 /* PlanARouteButton@2x.png */; };
+		FB1139F51673F0AC007F43C7 /* FindAStationButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1139F31673F0AC007F43C7 /* FindAStationButton.png */; };
+		FB1139F61673F0AC007F43C7 /* FindAStationButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1139F41673F0AC007F43C7 /* FindAStationButton@2x.png */; };
+		FB1139F91673F37D007F43C7 /* FavRoutesButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1139F71673F37D007F43C7 /* FavRoutesButton.png */; };
+		FB1139FA1673F37D007F43C7 /* FavRoutesButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1139F81673F37D007F43C7 /* FavRoutesButton@2x.png */; };
+		FB1139FC1673F9D1007F43C7 /* SettingsCogButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1139FB1673F9D1007F43C7 /* SettingsCogButton.png */; };
+		FB1139FE1673FA26007F43C7 /* SettingsCogButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1139FD1673FA26007F43C7 /* SettingsCogButton@2x.png */; };
+		FB113A001673FD91007F43C7 /* AdvancedMenuButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB1139FF1673FD91007F43C7 /* AdvancedMenuButton@2x.png */; };
+		FB113A03167447C6007F43C7 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FB113A02167447C6007F43C7 /* MapViewController.m */; };
+		FB113A071674491D007F43C7 /* CustomMetroMap@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = FB113A061674491D007F43C7 /* CustomMetroMap@2x.png */; };
+		FB113A0D1674559E007F43C7 /* CustomMetroMap.png in Resources */ = {isa = PBXBuildFile; fileRef = FB113A0C1674559E007F43C7 /* CustomMetroMap.png */; };
 		FB4DDECF166FEEC3008848A3 /* CloseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC7166FEEC2008848A3 /* CloseButton.png */; };
 		FB4DDED0166FEEC3008848A3 /* DCEZLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */; };
 		FB4DDED1166FEEC3008848A3 /* fav-routes-btn.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDEC9166FEEC2008848A3 /* fav-routes-btn.png */; };
@@ -57,6 +72,7 @@
 		FB4DDED6166FEEC3008848A3 /* SettingsButton.png in Resources */ = {isa = PBXBuildFile; fileRef = FB4DDECE166FEEC3008848A3 /* SettingsButton.png */; };
 		FB7544D81672BE2700B8A5E2 /* StandardCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB7544D71672BE2700B8A5E2 /* StandardCustomCell.xib */; };
 		FB7544DC1672BE5700B8A5E2 /* StandardCustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB7544DB1672BE5700B8A5E2 /* StandardCustomCell.m */; };
+		FBDCC1691675047D00B40407 /* DCEZAppIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = FBDCC1681675047D00B40407 /* DCEZAppIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -126,8 +142,24 @@
 		AFCED320167273B800A24240 /* FindStationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindStationViewController.m; path = ../FindStationViewController.m; sourceTree = "<group>"; };
 		AFDCC46616719CE300447A7B /* FavoritesTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FavoritesTableViewController.h; path = ../FavoritesTableViewController.h; sourceTree = "<group>"; };
 		AFDCC46716719CE300447A7B /* FavoritesTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FavoritesTableViewController.m; path = ../FavoritesTableViewController.m; sourceTree = "<group>"; };
-		FB2EBFB21672DE39008E870F /* TransferStationBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "TransferStationBackground@2x.png"; sourceTree = "<group>"; };
-		FB2EBFB41672E424008E870F /* StandardStationBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StandardStationBackground@2x.png"; sourceTree = "<group>"; };
+		FB0AB74D1673BF020021FD2E /* RedLineStationBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RedLineStationBackground@2x.png"; sourceTree = "<group>"; };
+		FB0AB7511673D40E0021FD2E /* BlueOrangeRedStationBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BlueOrangeRedStationBackground@2x.png"; sourceTree = "<group>"; };
+		FB0AB7521673D40E0021FD2E /* RedYellowGreenStationBackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "RedYellowGreenStationBackground@2x.png"; sourceTree = "<group>"; };
+		FB0AB7551673D7650021FD2E /* ShadyGrove.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = ShadyGrove.jpeg; sourceTree = "<group>"; };
+		FB1139EB1673E39E007F43C7 /* Metrobackground@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Metrobackground@2x.png"; sourceTree = "<group>"; };
+		FB1139EF1673EE6E007F43C7 /* PlanARouteButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PlanARouteButton.png; sourceTree = "<group>"; };
+		FB1139F11673EFAC007F43C7 /* PlanARouteButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlanARouteButton@2x.png"; sourceTree = "<group>"; };
+		FB1139F31673F0AC007F43C7 /* FindAStationButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FindAStationButton.png; sourceTree = "<group>"; };
+		FB1139F41673F0AC007F43C7 /* FindAStationButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FindAStationButton@2x.png"; sourceTree = "<group>"; };
+		FB1139F71673F37D007F43C7 /* FavRoutesButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = FavRoutesButton.png; sourceTree = "<group>"; };
+		FB1139F81673F37D007F43C7 /* FavRoutesButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "FavRoutesButton@2x.png"; sourceTree = "<group>"; };
+		FB1139FB1673F9D1007F43C7 /* SettingsCogButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SettingsCogButton.png; sourceTree = "<group>"; };
+		FB1139FD1673FA26007F43C7 /* SettingsCogButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SettingsCogButton@2x.png"; sourceTree = "<group>"; };
+		FB1139FF1673FD91007F43C7 /* AdvancedMenuButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AdvancedMenuButton@2x.png"; sourceTree = "<group>"; };
+		FB113A01167447C5007F43C7 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = SOURCE_ROOT; };
+		FB113A02167447C6007F43C7 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = SOURCE_ROOT; };
+		FB113A061674491D007F43C7 /* CustomMetroMap@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "CustomMetroMap@2x.png"; sourceTree = "<group>"; };
+		FB113A0C1674559E007F43C7 /* CustomMetroMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CustomMetroMap.png; sourceTree = "<group>"; };
 		FB4DDEC7166FEEC2008848A3 /* CloseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CloseButton.png; sourceTree = "<group>"; };
 		FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DCEZLogo.png; sourceTree = "<group>"; };
 		FB4DDEC9166FEEC2008848A3 /* fav-routes-btn.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fav-routes-btn.png"; sourceTree = "<group>"; };
@@ -139,6 +171,7 @@
 		FB7544D71672BE2700B8A5E2 /* StandardCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StandardCustomCell.xib; sourceTree = "<group>"; };
 		FB7544DA1672BE5700B8A5E2 /* StandardCustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StandardCustomCell.h; sourceTree = "<group>"; };
 		FB7544DB1672BE5700B8A5E2 /* StandardCustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StandardCustomCell.m; sourceTree = "<group>"; };
+		FBDCC1681675047D00B40407 /* DCEZAppIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = DCEZAppIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,18 +210,32 @@
 			isa = PBXGroup;
 			children = (
 				AF96472D1672A57D00F47062 /* EndCellBackground@2x.png */,
+				FB0AB7551673D7650021FD2E /* ShadyGrove.jpeg */,
 				AF96472E1672A57D00F47062 /* MidCellBackground@2x.png */,
+				FB113A0C1674559E007F43C7 /* CustomMetroMap.png */,
 				AF96472F1672A57D00F47062 /* StartCellBackground@2x.png */,
 				AF61064A1664426100588519 /* Default.png */,
+				FB1139F11673EFAC007F43C7 /* PlanARouteButton@2x.png */,
 				AF6106481664425E00588519 /* Default@2x.png */,
-				FB2EBFB41672E424008E870F /* StandardStationBackground@2x.png */,
-				FB2EBFB21672DE39008E870F /* TransferStationBackground@2x.png */,
 				AFC382DD1671972500CDC006 /* Default-568h@2x.png */,
+				FB1139EB1673E39E007F43C7 /* Metrobackground@2x.png */,
 				FB4DDEC7166FEEC2008848A3 /* CloseButton.png */,
 				FB4DDEC8166FEEC2008848A3 /* DCEZLogo.png */,
+				FB1139F31673F0AC007F43C7 /* FindAStationButton.png */,
+				FB1139F41673F0AC007F43C7 /* FindAStationButton@2x.png */,
+				FB1139F71673F37D007F43C7 /* FavRoutesButton.png */,
+				FB1139FF1673FD91007F43C7 /* AdvancedMenuButton@2x.png */,
+				FB1139FB1673F9D1007F43C7 /* SettingsCogButton.png */,
+				FB1139F81673F37D007F43C7 /* FavRoutesButton@2x.png */,
+				FB1139FD1673FA26007F43C7 /* SettingsCogButton@2x.png */,
+				FB0AB74D1673BF020021FD2E /* RedLineStationBackground@2x.png */,
+				FB113A061674491D007F43C7 /* CustomMetroMap@2x.png */,
+				FB1139EF1673EE6E007F43C7 /* PlanARouteButton.png */,
 				FB4DDEC9166FEEC2008848A3 /* fav-routes-btn.png */,
 				FB4DDECA166FEEC2008848A3 /* find-stations-btn.png */,
 				FB4DDECB166FEEC2008848A3 /* ListButton.png */,
+				FB0AB7511673D40E0021FD2E /* BlueOrangeRedStationBackground@2x.png */,
+				FB0AB7521673D40E0021FD2E /* RedYellowGreenStationBackground@2x.png */,
 				FB4DDECC166FEEC2008848A3 /* MenuButton.png */,
 				FB4DDECD166FEEC2008848A3 /* plan-a-route-btn.png */,
 				FB4DDECE166FEEC3008848A3 /* SettingsButton.png */,
@@ -225,6 +272,7 @@
 		AFCDAD801637163E00F76D41 = {
 			isa = PBXGroup;
 			children = (
+				FBDCC1681675047D00B40407 /* DCEZAppIcon.png */,
 				AFCDADA61637164C00F76D41 /* MainStoryboard.storyboard */,
 				AF9647301672A57D00F47062 /* StartStation.xib */,
 				AF0DAE9916389C130036254D /* libsqlite3.dylib */,
@@ -264,6 +312,8 @@
 				FB7544DA1672BE5700B8A5E2 /* StandardCustomCell.h */,
 				FB7544DB1672BE5700B8A5E2 /* StandardCustomCell.m */,
 				AFC382CE16717BD000CDC006 /* ChooseDepartureStationViewController.h */,
+				FB113A01167447C5007F43C7 /* MapViewController.h */,
+				FB113A02167447C6007F43C7 /* MapViewController.m */,
 				AFC382CF16717BD000CDC006 /* ChooseDepartureStationViewController.m */,
 				AFC382D116717BDB00CDC006 /* ChooseDestinationStationViewController.h */,
 				AFC382D216717BDB00CDC006 /* ChooseDestinationStationViewController.m */,
@@ -366,8 +416,23 @@
 				AF9647331672A57D00F47062 /* StartCellBackground@2x.png in Resources */,
 				AF9647341672A57D00F47062 /* StartStation.xib in Resources */,
 				FB7544D81672BE2700B8A5E2 /* StandardCustomCell.xib in Resources */,
-				FB2EBFB31672DE39008E870F /* TransferStationBackground@2x.png in Resources */,
-				FB2EBFB51672E424008E870F /* StandardStationBackground@2x.png in Resources */,
+				FB0AB7501673BF020021FD2E /* RedLineStationBackground@2x.png in Resources */,
+				FB0AB7531673D40E0021FD2E /* BlueOrangeRedStationBackground@2x.png in Resources */,
+				FB0AB7541673D40E0021FD2E /* RedYellowGreenStationBackground@2x.png in Resources */,
+				FB0AB7561673D7650021FD2E /* ShadyGrove.jpeg in Resources */,
+				FB1139EC1673E39E007F43C7 /* Metrobackground@2x.png in Resources */,
+				FB1139F01673EE6E007F43C7 /* PlanARouteButton.png in Resources */,
+				FB1139F21673EFAC007F43C7 /* PlanARouteButton@2x.png in Resources */,
+				FB1139F51673F0AC007F43C7 /* FindAStationButton.png in Resources */,
+				FB1139F61673F0AC007F43C7 /* FindAStationButton@2x.png in Resources */,
+				FB1139F91673F37D007F43C7 /* FavRoutesButton.png in Resources */,
+				FB1139FA1673F37D007F43C7 /* FavRoutesButton@2x.png in Resources */,
+				FB1139FC1673F9D1007F43C7 /* SettingsCogButton.png in Resources */,
+				FB1139FE1673FA26007F43C7 /* SettingsCogButton@2x.png in Resources */,
+				FB113A001673FD91007F43C7 /* AdvancedMenuButton@2x.png in Resources */,
+				FB113A071674491D007F43C7 /* CustomMetroMap@2x.png in Resources */,
+				FB113A0D1674559E007F43C7 /* CustomMetroMap.png in Resources */,
+				FBDCC1691675047D00B40407 /* DCEZAppIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -404,6 +469,7 @@
 				AFCED321167273B800A24240 /* FindStationViewController.m in Sources */,
 				AF9647381672A65B00F47062 /* OverviewCustomCell.m in Sources */,
 				FB7544DC1672BE5700B8A5E2 /* StandardCustomCell.m in Sources */,
+				FB113A03167447C6007F43C7 /* MapViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
