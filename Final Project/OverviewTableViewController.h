@@ -12,6 +12,7 @@
 @interface OverviewTableViewController : UITableViewController
 
 @property (nonatomic, strong) NSDictionary *overviewStationsDictionary;
+@property (strong, nonatomic) NSDictionary *redLineStationPredictionsDictionary;
 @property (nonatomic, strong) NSString *departureStationCodeForRequest;
 @property (nonatomic, strong) NSString *destinationStationCodeForRequest;
 @property (nonatomic, strong) AppDelegate *appDel;

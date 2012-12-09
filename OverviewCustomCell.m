@@ -10,7 +10,7 @@
 
 @implementation OverviewCustomCell
 
-@synthesize stationName;
+@synthesize stationName, timePrediction;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

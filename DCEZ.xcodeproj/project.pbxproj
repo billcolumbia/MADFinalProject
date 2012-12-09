@@ -308,12 +308,7 @@
 			children = (
 				AFCDAD9E1637163F00F76D41 /* AppDelegate.h */,
 				AFCDAD9F1637163F00F76D41 /* AppDelegate.m */,
-				FB7544D71672BE2700B8A5E2 /* StandardCustomCell.xib */,
-				FB7544DA1672BE5700B8A5E2 /* StandardCustomCell.h */,
-				FB7544DB1672BE5700B8A5E2 /* StandardCustomCell.m */,
 				AFC382CE16717BD000CDC006 /* ChooseDepartureStationViewController.h */,
-				FB113A01167447C5007F43C7 /* MapViewController.h */,
-				FB113A02167447C6007F43C7 /* MapViewController.m */,
 				AFC382CF16717BD000CDC006 /* ChooseDepartureStationViewController.m */,
 				AFC382D116717BDB00CDC006 /* ChooseDestinationStationViewController.h */,
 				AFC382D216717BDB00CDC006 /* ChooseDestinationStationViewController.m */,
@@ -323,6 +318,8 @@
 				AFCED320167273B800A24240 /* FindStationViewController.m */,
 				AF534598165AFFCC0082AB1D /* HomeViewController.h */,
 				AF534599165AFFCC0082AB1D /* HomeViewController.m */,
+				FB113A01167447C5007F43C7 /* MapViewController.h */,
+				FB113A02167447C6007F43C7 /* MapViewController.m */,
 				AFB74F40166D6D1600BA71EE /* MenuViewController.h */,
 				AFB74F41166D6D1600BA71EE /* MenuViewController.m */,
 				AF9647361672A65B00F47062 /* OverviewCustomCell.h */,
@@ -331,6 +328,9 @@
 				AFC382DB167187C500CDC006 /* OverviewTableViewController.m */,
 				AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */,
 				AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */,
+				FB7544D71672BE2700B8A5E2 /* StandardCustomCell.xib */,
+				FB7544DA1672BE5700B8A5E2 /* StandardCustomCell.h */,
+				FB7544DB1672BE5700B8A5E2 /* StandardCustomCell.m */,
 				AFCDAD961637163F00F76D41 /* Supporting Files */,
 			);
 			name = "Application Files";

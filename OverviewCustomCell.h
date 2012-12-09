@@ -11,5 +11,6 @@
 @interface OverviewCustomCell : UITableViewCell
 
 @property (nonatomic, strong) IBOutlet UILabel *stationName;
+@property (nonatomic, strong) IBOutlet UILabel *timePrediction;
 
 @end

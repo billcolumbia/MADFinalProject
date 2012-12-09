@@ -18,30 +18,10 @@
 @implementation OverviewTableViewController
 
 
-@synthesize overviewStationsDictionary, departureStationCodeForRequest, destinationStationCodeForRequest, appDel;
+@synthesize overviewStationsDictionary, redLineStationPredictionsDictionary, departureStationCodeForRequest, destinationStationCodeForRequest, appDel;
 
 NSString *pathUrlString = @"http://api.wmata.com/Rail.svc/json/JPath?FromStationCode=";
 NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
-
-//- (id)initWithStyle:(UITableViewStyle)style
-//{
-//    self = [super initWithStyle:style];
-//    if (self)
-//    {
-//        // Custom initialization
-//    }
-//    return self;
-//}
-
-//-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
-//    self = [super initWithNibName:nil bundle:nil];
-//    if(self)
-//    {
-//        self.view.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"MidCellBackground.png"]];
-//                                     //colorWithRed:34 green:37 blue:37 alpha:1];
-//    }
-//    return self;
-//}
 
 -(void)viewWillAppear:(BOOL)animated
 {
@@ -58,8 +38,7 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
     appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     departureStationCodeForRequest = appDel.departureStationCode;
     destinationStationCodeForRequest = appDel.destinationStationCode;
-//    NSLog(@"departure code in overview : %@",departureStationCodeForRequest);
-//    NSLog(@"destination code in overview : %@",destinationStationCodeForRequest);
+    redLineStationPredictionsDictionary = appDel.redLineStationPredictionsDictionary;
     
     // construct api url with them    
     pathUrlString = [pathUrlString stringByAppendingString:departureStationCodeForRequest];
@@ -161,6 +140,11 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
     else{
         NSLog(@"You really messed this up duder!");
     }
+    
+    NSString *station = overviewStationsDictionary[@"Path"][indexPath.row][@"StationName"];
+//    NSString *time = overviewStationsDictionary[@"Path"][indexPath.row][@"Min"];
+    NSLog(@"predictions: %@",redLineStationPredictionsDictionary);
+    
     
     return cell;
 }
