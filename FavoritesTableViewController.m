@@ -17,7 +17,8 @@
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
-    if (self) {
+    if (self)
+    {
         // Custom initialization
     }
     return self;
@@ -27,9 +28,32 @@
 {
     [self.navigationController setNavigationBarHidden:NO animated:YES];
     
-    // check if favs exist in a .plist
-    // if yes, import them
-    // if not, show blank favs screen
+    // check if Favorites.plist exists.
+    // make path to document directory
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentationDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *pathToPlist = [documentsDirectory stringByAppendingString:@"Favorites.plist"];
+    
+    BOOL favoritesPlistExists = NO;
+    NSFileManager *fileManager = [NSFileManager defaultManager];
+    favoritesPlistExists = [fileManager fileExistsAtPath:pathToPlist];
+    
+    if(favoritesPlistExists == NO)
+    {
+        // plist does not exist, show blank favorites 
+        NSLog(@"Favorites.plist does not exist in favoritesVC.");
+
+    }
+    else if(favoritesPlistExists == YES)
+    {
+        // plist does exist, show in tableview
+        NSLog(@"Favorites.plist exists in favoritesVC.");
+    }
+    else
+    {
+        NSLog(@"World End. Favrites.plist neither exists nor does not exist.");
+    }
+
 }
 
 - (void)viewDidLoad

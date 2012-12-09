@@ -188,14 +188,13 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
 {
     if (buttonIndex == 0)
     {
-        // do nothing, they clicked 'cancel.'
+        // do nothing, they clicked 'Cancel'
     }
     else if (buttonIndex == 1)
     {
         NSLog(@"Entered: %@",[[alertView textFieldAtIndex:0] text]);
         
-        
-        // save entered text as title along with two station codes.
+        // save entered text as title along with two station codes in favorites.plist.
         
         // add title and codes into array
         NSString *newFavoriteTitle = [[alertView textFieldAtIndex:0] text];
@@ -213,28 +212,28 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
         
         if(favoritesPlistExists == NO)
         {
-            // plist does not exist, make new.
-            NSLog(@"Favorites.plist does not exist.");
+            NSLog(@"Favorites.plist does not exist. Creating new Favorites.plist");
+            NSMutableArray *mutableFavoritesArray = [[NSMutableArray alloc] init];
+            // add new fav to the mutable array
+            [mutableFavoritesArray addObject:newFavoriteArray];
+            // write the whole mutable array into the plist
+            [mutableFavoritesArray writeToFile:pathToPlist atomically:YES];
         }
         else if(favoritesPlistExists == YES)
         {
+            NSLog(@"Favorites.plist exists. Inserting new favs into plist.");                        
             // plist does exist, pull out into nsmutable array
+            NSMutableArray *mutableFavoritesArray = [[NSMutableArray alloc] initWithContentsOfFile:pathToPlist];
+            // add new fav to the mutable array
+            [mutableFavoritesArray addObject:newFavoriteArray];
             // write the whole mutable array into the plist
-            NSLog(@"Favorites.plist exists.");            
+            [mutableFavoritesArray writeToFile:pathToPlist atomically:YES];
         }
         else
         {
-            NSLog(@"World End. Favrites.plist neither exists nor does not exist.");
+            NSLog(@"World End. Favorites.plist neither exists nor does not exist. Somehow.");
         }
         
-        // if so, pull its contents into an NSMutable Array
-            // add the new items to the mutable array
-            // write the whole mutable array into the plist
-        
-        // if not, create it and save the new array into it.
-        
-       
-        // 
     }
 }
 
