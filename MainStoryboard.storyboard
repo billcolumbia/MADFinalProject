@@ -441,6 +441,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="1uf-i6-OnO" kind="push" id="hJ1-sr-ir4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="LPK-41-n7o">
                                 <rect key="frame" x="0.0" y="167" width="320" height="81"/>
@@ -651,5 +654,6 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="JAv-bX-FV0"/>
+        <segue reference="hJ1-sr-ir4"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -141,9 +141,11 @@ NSString *pathKeyString = @"bezj8khcsbj4jmsy6km4tjrm";
         NSLog(@"You really messed this up duder!");
     }
     
-    NSString *station = overviewStationsDictionary[@"Path"][indexPath.row][@"StationName"];
-//    NSString *time = overviewStationsDictionary[@"Path"][indexPath.row][@"Min"];
+    NSString *station = overviewStationsDictionary[@"Trains"][indexPath.row][@"DestinationName"];
+    NSString *time = overviewStationsDictionary[@"Trains"][indexPath.row][@"Min"];
     NSLog(@"predictions: %@",redLineStationPredictionsDictionary);
+    
+//    cell.timePrediction.text = @"";
     
     
     return cell;
