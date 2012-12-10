@@ -58,7 +58,12 @@
 // Customize the number of rows in the table view.
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [redLineIncidentsDictionary count];
+    if ([redLineIncidentsDictionary count] == nil)
+    {
+        return 0;
+    }
+    else
+        return [redLineIncidentsDictionary count];
 }
 
 // Customize the appearance of table view cells.
@@ -83,6 +88,15 @@
     //	NSString *alertString = [NSString stringWithFormat:@"Clicked on row #%d", [indexPath row]];
     //	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertString message:@"" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil];
     //	[alert show];
+}
+
+- (IBAction)cancelButtonPressed:(id)sender
+{
+    [self dismissViewControllerAnimated:YES completion:^(void)
+     {
+         NSLog(@"Dismissed view");
+     }];
+    
 }
 
 @end

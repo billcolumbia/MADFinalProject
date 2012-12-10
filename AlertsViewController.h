@@ -19,4 +19,6 @@
 @property (nonatomic, strong) UITableView *alertsTableView;
 @property (nonatomic, strong) UIBarButtonItem *backButton;
 
+-(IBAction) cancelButtonPressed:(id)sender;
+
 @end
