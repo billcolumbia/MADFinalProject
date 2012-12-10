@@ -10,6 +10,8 @@
 
 @interface MenuViewController : UIViewController
 
+@property (nonatomic, strong) NSString *testString;
+
 -(IBAction) cancelButtonPressed:(id)sender;
 
 @end

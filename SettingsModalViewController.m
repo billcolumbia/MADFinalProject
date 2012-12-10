@@ -16,6 +16,9 @@
 
 @synthesize testString;
 
+SettingsModalViewController *addController;
+UINavigationController *navigationController;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -55,13 +58,13 @@
     // The new view controller configures a Cancel and Done button for the
     // navigation bar.
     
-    SettingsModalViewController *addController= [[SettingsModalViewController alloc] init];
+    addController= [[SettingsModalViewController alloc] init];
     
     // Configure the SettingModalViewController. In this case, it reports any changes to a custom delegate object.
     //    addController.delegate = self;
     
     // Create the navigation controller and present it.
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:addController];
+    navigationController = [[UINavigationController alloc] initWithRootViewController:addController];
     
     [self presentViewController:navigationController animated:YES completion: nil];
     
@@ -69,10 +72,11 @@
 
 - (IBAction)cancelButtonPressed:(id)sender
 {
-    [ self dismissViewControllerAnimated:YES completion:^(void)
-      {
-          NSLog(@"Dismissed view");
-      }];    
+    [self dismissViewControllerAnimated:YES completion:^(void)
+    {
+        NSLog(@"Dismissed view");
+    }];
+    
 }
 
 @end

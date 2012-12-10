@@ -84,7 +84,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0Xv-E6-dG2" kind="push" id="Z0Q-3V-QEz"/>
+                                    <segue destination="0Xv-E6-dG2" kind="modal" id="Z0Q-3V-QEz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WI7-Vu-8ht">
@@ -349,8 +349,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="cancelButtonPressed:" destination="EUS-Ck-K7x" eventType="touchUpInside" id="Lzw-Nq-iQB"/>
-                                    <action selector="cancelButtonPressed:" destination="0Xv-E6-dG2" eventType="touchUpInside" id="bPK-Yg-Yv7"/>
+                                    <action selector="cancelButtonPressed:" destination="0Xv-E6-dG2" eventType="touchUpInside" id="DzX-73-a46"/>
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Advanced Menu" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="TBQ-DV-L2J">
@@ -425,7 +424,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="BbF-dn-VxO" kind="push" id="xX5-JF-PGb"/>
+                                    <segue destination="BbF-dn-VxO" kind="push" id="usk-6z-NNO"/>
                                 </connections>
                             </button>
                         </subviews>

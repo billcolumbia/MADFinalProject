@@ -14,13 +14,13 @@
 
 @implementation AlertsViewController
 
-@synthesize alertsTableView, redLineIncidentsDictionary, appDel;
+@synthesize alertsTableView, redLineIncidentsDictionary, appDel, backButton;
 
 
 -(void)viewWillAppear:(BOOL)animated
 {
     // set back button to custom added back button
-    //    [self.navigationItem setBackBarButtonItem:backButton];
+    [self.navigationItem setBackBarButtonItem:backButton];
     
     appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
     redLineIncidentsDictionary = appDel.redLineIncidentsDictionary;
@@ -77,15 +77,12 @@
     return cell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
 	// open a alert with an OK and cancel button
     //	NSString *alertString = [NSString stringWithFormat:@"Clicked on row #%d", [indexPath row]];
     //	UIAlertView *alert = [[UIAlertView alloc] initWithTitle:alertString message:@"" delegate:self cancelButtonTitle:@"Done" otherButtonTitles:nil];
     //	[alert show];
 }
 
--(void)clickedBack
-{
-    
-}
 @end

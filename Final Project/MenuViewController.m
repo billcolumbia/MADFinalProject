@@ -14,6 +14,15 @@
 
 @implementation MenuViewController
 
+@synthesize testString;
+
+UIViewController *presentedVC;
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    
+}
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -43,7 +52,9 @@
 
 - (IBAction)cancelButtonPressed:(id)sender
 {
-    [ self dismissViewControllerAnimated:YES completion:^(void)
+    NSLog(@"Pressed. presentedVC is %@", presentedVC);
+    
+    [self dismissViewControllerAnimated:YES completion:^(void)
      {
          NSLog(@"Dismissed view");
      }];
