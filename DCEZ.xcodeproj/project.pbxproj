@@ -13,7 +13,7 @@
 		AF0DAE9616389BC70036254D /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0DAE9016389BC70036254D /* FMDatabaseQueue.m */; };
 		AF0DAE9716389BC70036254D /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = AF0DAE9216389BC70036254D /* FMResultSet.m */; };
 		AF0DAE9A16389C130036254D /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0DAE9916389C130036254D /* libsqlite3.dylib */; };
-		AF46092E16763BA200482B97 /* AlertsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF46092D16763BA100482B97 /* AlertsTableViewController.m */; };
+		AF460934167658D600482B97 /* AlertsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF460933167658D600482B97 /* AlertsViewController.m */; };
 		AF53459A165AFFCC0082AB1D /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF534599165AFFCC0082AB1D /* HomeViewController.m */; };
 		AF53459D165B01DC0082AB1D /* SettingsModalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF53459C165B01DC0082AB1D /* SettingsModalViewController.m */; };
 		AF6106491664425E00588519 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = AF6106481664425E00588519 /* Default@2x.png */; };
@@ -88,8 +88,8 @@
 		AF0DAE9116389BC70036254D /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FMResultSet.h; path = FMDB/FMResultSet.h; sourceTree = "<group>"; };
 		AF0DAE9216389BC70036254D /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FMResultSet.m; path = FMDB/FMResultSet.m; sourceTree = "<group>"; };
 		AF0DAE9916389C130036254D /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
-		AF46092C16763BA100482B97 /* AlertsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlertsTableViewController.h; sourceTree = "<group>"; };
-		AF46092D16763BA100482B97 /* AlertsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlertsTableViewController.m; sourceTree = "<group>"; };
+		AF460932167658D500482B97 /* AlertsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AlertsViewController.h; path = ../AlertsViewController.h; sourceTree = "<group>"; };
+		AF460933167658D600482B97 /* AlertsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AlertsViewController.m; path = ../AlertsViewController.m; sourceTree = "<group>"; };
 		AF534598165AFFCC0082AB1D /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HomeViewController.h; path = ../HomeViewController.h; sourceTree = "<group>"; };
 		AF534599165AFFCC0082AB1D /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HomeViewController.m; path = ../HomeViewController.m; sourceTree = "<group>"; };
 		AF53459B165B01DC0082AB1D /* SettingsModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsModalViewController.h; path = ../SettingsModalViewController.h; sourceTree = "<group>"; };
@@ -311,8 +311,8 @@
 			children = (
 				AFCDAD9E1637163F00F76D41 /* AppDelegate.h */,
 				AFCDAD9F1637163F00F76D41 /* AppDelegate.m */,
-				AF46092C16763BA100482B97 /* AlertsTableViewController.h */,
-				AF46092D16763BA100482B97 /* AlertsTableViewController.m */,
+				AF460932167658D500482B97 /* AlertsViewController.h */,
+				AF460933167658D600482B97 /* AlertsViewController.m */,
 				AFC382CE16717BD000CDC006 /* ChooseDepartureStationViewController.h */,
 				AFC382CF16717BD000CDC006 /* ChooseDepartureStationViewController.m */,
 				AFC382D116717BDB00CDC006 /* ChooseDestinationStationViewController.h */,
@@ -475,7 +475,7 @@
 				AF9647381672A65B00F47062 /* OverviewCustomCell.m in Sources */,
 				FB7544DC1672BE5700B8A5E2 /* StandardCustomCell.m in Sources */,
 				FB113A03167447C6007F43C7 /* MapViewController.m in Sources */,
-				AF46092E16763BA200482B97 /* AlertsTableViewController.m in Sources */,
+				AF460934167658D600482B97 /* AlertsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
