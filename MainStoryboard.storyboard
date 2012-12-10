@@ -84,7 +84,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0Xv-E6-dG2" kind="modal" id="Fz8-fd-4Rf"/>
+                                    <segue destination="0Xv-E6-dG2" kind="push" id="Z0Q-3V-QEz"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="WI7-Vu-8ht">
@@ -283,6 +283,51 @@
             </objects>
             <point key="canvasLocation" x="-91" y="-639"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kqf-XU-nlH">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="ETW-vM-Jas" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="gQz-ro-nev">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="0Xv-E6-dG2" kind="relationship" relationship="rootViewController" id="pF1-fx-FWN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iff-Wo-Wta" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="-567"/>
+        </scene>
+        <!--Alerts Table View Controller-->
+        <scene sceneID="26m-mp-FLE">
+            <objects>
+                <tableViewController id="0Xj-u5-qzQ" customClass="AlertsTableViewController" sceneMemberID="viewController">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="LCo-sX-P1R">
+                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="l4h-OR-bLR">
+                                <rect key="frame" x="0.0" y="22" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="0Xj-u5-qzQ" id="utw-kL-sIf"/>
+                            <outlet property="delegate" destination="0Xj-u5-qzQ" id="w7h-Fc-8Fv"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="dve-AY-iKt"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="H5Z-cH-dKV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="394" y="-1822"/>
+        </scene>
         <!--menuModalVC-->
         <scene sceneID="4YI-de-Zl6">
             <objects>
@@ -378,6 +423,9 @@
                                 <state key="highlighted">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <segue destination="0Xj-u5-qzQ" kind="push" id="Yod-yT-SOx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.078431375319999996" green="0.086274512110000007" blue="0.090196080509999998" alpha="1" colorSpace="deviceRGB"/>
@@ -386,7 +434,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bum-3t-vES" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="400" y="-639"/>
+            <point key="canvasLocation" x="396" y="-1189"/>
         </scene>
         <!--Choose Departure Station View Controller - Start-->
         <scene sceneID="ifu-wd-zRh">
@@ -606,6 +654,9 @@
         <image name="SettingsCogButton.png" width="30" height="30"/>
     </resources>
     <classes>
+        <class className="AlertsTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/AlertsTableViewController.h"/>
+        </class>
         <class className="ChooseDepartureStationViewController" superclassName="UITableViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ChooseDepartureStationViewController.h"/>
         </class>
@@ -653,7 +704,8 @@
         <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
+        <segue reference="Z0Q-3V-QEz"/>
+        <segue reference="kos-j7-h2d"/>
         <segue reference="JAv-bX-FV0"/>
-        <segue reference="hJ1-sr-ir4"/>
     </inferredMetricsTieBreakers>
 </document>

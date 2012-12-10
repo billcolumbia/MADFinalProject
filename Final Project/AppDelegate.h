@@ -14,6 +14,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) NSDictionary *redLineStationsDictionary;
 @property (strong, nonatomic) NSDictionary *redLineStationPredictionsDictionary;
+@property (strong, nonatomic) NSDictionary *redLineIncidentsDictionary;
 @property (strong, nonatomic) NSString *departureStationCode;
 @property (strong, nonatomic) NSString *destinationStationCode;
 @property (strong, nonatomic) AppDelegate *appDel;

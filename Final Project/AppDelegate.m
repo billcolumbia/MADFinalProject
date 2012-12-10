@@ -11,18 +11,21 @@
 
 @implementation AppDelegate
 
-@synthesize redLineStationsDictionary, redLineStationPredictionsDictionary, appDel;
+@synthesize redLineStationsDictionary, redLineStationPredictionsDictionary, redLineIncidentsDictionary, appDel;
 
 // url strings to request all the red line stations
 NSString *urlString = @"http://api.wmata.com/Rail.svc/json/JStations?LineCode=RD&api_key=";
 NSString *predictionsURLString = @"http://api.wmata.com/StationPrediction.svc/json/GetPrediction/All?api_key=";
+NSString *incidentsURLString = @"http://api.wmata.com/Incidents.svc/json/Incidents?api_key=";
 NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [self getStationsJSON];
-    [self getStationPredictionsJSON];
+    [self getRedLineStationsJSON];
+    [self getRedLinePredictionsJSON];
+    [self getRedLineIncidentsJSON];
     
+    // this bit is all black voodoo magic that Bill did.
     UIView *bgView = [[UIView alloc]initWithFrame:_window.frame];    
     bgView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"MetroBackground.png"]];
     [_window addSubview:bgView];
@@ -58,7 +61,7 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
--(void)getStationsJSON
+-(void)getRedLineStationsJSON
 {
     // show spinning indicator on status bar to demonstrate downloading is happening.
     [UIApplication sharedApplication].networkActivityIndicatorVisible=YES;
@@ -73,7 +76,7 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
     {
          // Download done, stop spinning indicator.
         [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
-        NSLog(@"API JSON request in AppDelegate success!");
+        NSLog(@"Stations JSON request in AppDelegate success!");
         
         //capture JSON, store here and in appDel var.
         appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
@@ -92,7 +95,7 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
     [apiOperation start];
 }
 
--(void)getStationPredictionsJSON
+-(void)getRedLinePredictionsJSON
 {    
      // show spinning indicator on status bar to demonstrate downloading is happening.
     [UIApplication sharedApplication].networkActivityIndicatorVisible=YES;
@@ -120,6 +123,40 @@ NSString *keyString = @"bezj8khcsbj4jmsy6km4tjrm";
         [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
         
         NSLog(@"Station Predictions request fail :( ");
+        NSLog(@"Error: %@", error);
+    }];
+    
+    [apiOperation start];
+}
+
+-(void)getRedLineIncidentsJSON
+{
+     // show spinning indicator on status bar to demonstrate downloading is happening.
+    [UIApplication sharedApplication].networkActivityIndicatorVisible=YES;
+    
+    // here pull line incidents
+    incidentsURLString =[incidentsURLString stringByAppendingString:keyString];
+    NSURL *apiURL = [NSURL URLWithString:incidentsURLString];
+    NSURLRequest *apiRequest = [NSURLRequest requestWithURL:apiURL];    
+    
+    AFJSONRequestOperation *apiOperation = [AFJSONRequestOperation JSONRequestOperationWithRequest:apiRequest
+    success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON)
+    {
+         // Download done, stop spinning indicator.
+        [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
+        NSLog(@"Red line incidents request in AppDelegate success!");
+        
+        //capture JSON, store here and in appDel var.
+        appDel = (AppDelegate *)[[UIApplication sharedApplication] delegate];
+        appDel.redLineIncidentsDictionary = JSON;
+        redLineIncidentsDictionary = JSON;
+    }
+    failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON)
+    {
+        // Download stopped/failed, stop spinning indicator.        
+        [UIApplication sharedApplication].networkActivityIndicatorVisible=NO;
+        
+        NSLog(@"Red Line Incidents request fail :( ");
         NSLog(@"Error: %@", error);
     }];
     
